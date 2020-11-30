@@ -4,6 +4,7 @@ namespace App\Http\Controllers\News;
 
 use App\News\Newstag;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class NewstagController extends Controller
 {

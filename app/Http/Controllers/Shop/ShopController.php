@@ -2,11 +2,19 @@
 
 namespace App\Http\Controllers\Shop;
 
-use App\Shop\Shoptype;
+use App\Shop\Shop;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Shop\ShopRepository;
 
-class ShoptypeController extends Controller
+class ShopController extends Controller
 {
+    public function __construct(ShopRepository $shop)
+    {
+        $this->middleware('auth');
+        $this->shop = $shop;
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -15,6 +23,9 @@ class ShoptypeController extends Controller
     public function index()
     {
         //
+        $shops = $this->shop->getAllShops();
+
+        return view('backside.shop.index',compact('shops'));
     }
 
     /**
@@ -41,10 +52,10 @@ class ShoptypeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Shoptype  $shoptype
+     * @param  \App\Shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function show(Shoptype $shoptype)
+    public function show(Shop $shop)
     {
         //
     }
@@ -52,10 +63,10 @@ class ShoptypeController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Shoptype  $shoptype
+     * @param  \App\Shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function edit(Shoptype $shoptype)
+    public function edit(Shop $shop)
     {
         //
     }
@@ -64,10 +75,10 @@ class ShoptypeController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Shoptype  $shoptype
+     * @param  \App\Shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Shoptype $shoptype)
+    public function update(Request $request, Shop $shop)
     {
         //
     }
@@ -75,10 +86,10 @@ class ShoptypeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Shoptype  $shoptype
+     * @param  \App\Shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Shoptype $shoptype)
+    public function destroy(Shop $shop)
     {
         //
     }

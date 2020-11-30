@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Productsize;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ProductsizeController extends Controller
 {

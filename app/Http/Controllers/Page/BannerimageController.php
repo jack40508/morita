@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Page;
 
 use App\Page\Bannerimage;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class BannerimageController extends Controller
 {

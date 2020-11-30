@@ -21,10 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/backside', 'BacksideController@index');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['namespace' => 'Shop'],function(){
+    Route::resource('/backside/shop','ShopController');
+});

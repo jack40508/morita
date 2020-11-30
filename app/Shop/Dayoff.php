@@ -18,6 +18,6 @@ class Dayoff extends Model
     **------------------------------------------------------------------------*/
 
     public function shops(){
-        return $this->belongsToMany(Shop::class);
+        return $this->belongsToMany(Shop::class,'shop_dayoffs');
     }
 }

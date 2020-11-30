@@ -26,7 +26,7 @@ class Shop extends Model
     **------------------------------------------------------------------------*/
 
     public function dayoffs(){
-        return $this->belongsToMany(Dayoff::class);
+        return $this->belongsToMany(Dayoff::class,'shop_dayoffs');
     }
 
     public function shoptype(){

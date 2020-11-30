@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Shop;
 
-use App\Shop\Shop;
+use App\Shop\Dayoff;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class ShopController extends Controller
+class DayoffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +42,10 @@ class ShopController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Shop  $shop
+     * @param  \App\Dayoff  $dayoff
      * @return \Illuminate\Http\Response
      */
-    public function show(Shop $shop)
+    public function show(Dayoff $dayoff)
     {
         //
     }
@@ -52,10 +53,10 @@ class ShopController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Shop  $shop
+     * @param  \App\Dayoff  $dayoff
      * @return \Illuminate\Http\Response
      */
-    public function edit(Shop $shop)
+    public function edit(Dayoff $dayoff)
     {
         //
     }
@@ -64,10 +65,10 @@ class ShopController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Shop  $shop
+     * @param  \App\Dayoff  $dayoff
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Shop $shop)
+    public function update(Request $request, Dayoff $dayoff)
     {
         //
     }
@@ -75,10 +76,10 @@ class ShopController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Shop  $shop
+     * @param  \App\Dayoff  $dayoff
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Shop $shop)
+    public function destroy(Dayoff $dayoff)
     {
         //
     }
