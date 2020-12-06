@@ -5,8 +5,7 @@ namespace App\Shop;
 use Illuminate\Database\Eloquent\Model;
 use App\Shop\Shop;
 
-class Shoptype extends Model
-{
+class Shoptype extends Model{
     //
     protected $table = 'shoptypes';
     protected $fillable = [

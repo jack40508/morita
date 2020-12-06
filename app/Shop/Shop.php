@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Shop\Dayoff;
 use App\Shop\Shoptype;
 
-class Shop extends Model
-{
+class Shop extends Model{
     //
     protected $table = 'shops';
     protected $fillable = [

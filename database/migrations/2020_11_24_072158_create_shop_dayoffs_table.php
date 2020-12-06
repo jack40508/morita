@@ -14,6 +14,7 @@ class CreateShopDayoffsTable extends Migration
     public function up()
     {
         Schema::create('shop_dayoffs', function (Blueprint $table) {
+            $table->id();
             $table->integer('shop_id');
             $table->integer('dayoff_id');
             $table->timestamps();
