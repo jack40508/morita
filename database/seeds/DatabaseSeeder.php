@@ -16,5 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ShoptypeTableSeeder::class);
         $this->call(DayoffTableSeeder::class);
         $this->call(ShopDayoffTableSeeder::class);
+        $this->call(ProductTableSeeder::class);
+        $this->call(ProductkategorieTableSeeder::class);
+        $this->call(ProductsizeTableSeeder::class);
     }
 }

@@ -5,9 +5,16 @@ namespace App\Http\Controllers\Product;
 use App\Product\Productkategorie;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product\ProductkategorieRepository;
 
 class ProductkategorieController extends Controller
 {
+    public function __construct(ProductkategorieRepository $productkategorie)
+    {
+        $this->middleware('auth');
+        $this->productkategorie = $productkategorie;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +23,9 @@ class ProductkategorieController extends Controller
     public function index()
     {
         //
+        $productkategories = $this->productkategorie->getAllProductkategories();
+
+        return view("backside.productkategorie.index",compact('productkategories'));
     }
 
     /**
@@ -26,6 +36,7 @@ class ProductkategorieController extends Controller
     public function create()
     {
         //
+        return view("backside.productkategorie.create");
     }
 
     /**
@@ -37,6 +48,9 @@ class ProductkategorieController extends Controller
     public function store(Request $request)
     {
         //
+        $this->productkategorie->createProductkategorie($request);
+
+        return redirect('backside/productkategorie/');
     }
 
     /**
@@ -48,6 +62,8 @@ class ProductkategorieController extends Controller
     public function show(Productkategorie $productkategorie)
     {
         //
+
+        return view("backside.productkategorie.show",compact('productkategorie'));
     }
 
     /**
@@ -59,6 +75,7 @@ class ProductkategorieController extends Controller
     public function edit(Productkategorie $productkategorie)
     {
         //
+        return view("backside.productkategorie.edit",compact('productkategorie'));
     }
 
     /**
@@ -71,6 +88,9 @@ class ProductkategorieController extends Controller
     public function update(Request $request, Productkategorie $productkategorie)
     {
         //
+        $this->productkategorie->updateProductkategorie($productkategorie, $request);
+
+        return redirect('backside/productkategorie/');
     }
 
     /**
@@ -82,5 +102,8 @@ class ProductkategorieController extends Controller
     public function destroy(Productkategorie $productkategorie)
     {
         //
+        $this->productkategorie->destroyProductkategorie($productkategorie);
+
+        return redirect('backside/productkategorie/');
     }
 }

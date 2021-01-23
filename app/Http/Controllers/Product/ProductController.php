@@ -5,9 +5,18 @@ namespace App\Http\Controllers\Product;
 use App\Product\Product;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Product\ProductRepository;
+use App\Product\ProductkategorieRepository;
 
 class ProductController extends Controller
 {
+    public function __construct(ProductRepository $product, ProductkategorieRepository $productkategorie)
+    {
+        $this->middleware('auth');
+        $this->product = $product;
+        $this->productkategorie = $productkategorie;
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +25,9 @@ class ProductController extends Controller
     public function index()
     {
         //
+        $products = $this->product->getAllProducts();
+        
+        return view("backside.product.index",compact('products'));
     }
 
     /**
@@ -26,6 +38,9 @@ class ProductController extends Controller
     public function create()
     {
         //
+        $productkategories = $this->productkategorie->getAllProductkategoriesList();
+
+        return view("backside.product.create",compact('productkategories'));
     }
 
     /**
@@ -37,6 +52,10 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        //dd($request->limit);
+        $this->product->createNewProduct($request);
+
+        return redirect('backside/product/');
     }
 
     /**

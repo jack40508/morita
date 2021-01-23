@@ -26,3 +26,8 @@ Route::get('/backside', 'BacksideController@index');
 Route::group(['namespace' => 'Shop'],function(){
     Route::resource('/backside/shop','ShopController');
 });
+
+Route::group(['namespace' => 'Product'],function(){
+    Route::resource('/backside/product','ProductController');
+    Route::resource('/backside/productkategorie','ProductkategorieController');
+});

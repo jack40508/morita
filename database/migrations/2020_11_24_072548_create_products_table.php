@@ -17,8 +17,8 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('productkategorie_id');
-            $table->datetime('selldate');
-            $table->datetime('soldoutdate');
+            $table->date('selldate');
+            $table->date('soldoutdate');
             $table->timestamps();
         });
     }

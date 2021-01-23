@@ -9,7 +9,7 @@
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-md-4">
-                            <p>店舗名：</p>
+                            <p>店舗名</p>
                         </div>
                         <div class="col-md-8">
                             <p>{{ $shop->name }}</p>
@@ -20,7 +20,7 @@
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-md-4">
-                            <p>住所：</p>
+                            <p>住所</p>
                         </div>
                         <div class="col-md-8">
                             <p>{{ $shop->address }}</p>
@@ -31,7 +31,7 @@
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-md-4">
-                            <p>メールアドレス：</p>
+                            <p>メールアドレス</p>
                         </div>
                         <div class="col-md-8">
                             <p>{{ $shop->mail }}</p>
@@ -42,7 +42,7 @@
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-md-4">
-                            <p>電話：</p>
+                            <p>電話</p>
                         </div>
                         <div class="col-md-8">
                             <p>{{ $shop->phone }}</p>
@@ -53,7 +53,7 @@
                 <li class="list-group-item">
                     <div class="row">
                         <div class="col-md-4">
-                            <p>営業時間：</p>
+                            <p>営業時間</p>
                         </div>
                         <div class="col-md-8">
                             <p>{{ $shop->opentime }} ~ {{ $shop->closetime }}</p>
@@ -98,7 +98,7 @@
             </ul>
         </div>
         <div class="col-md-6">
-            <div class="collapse" id="collapsegooglemap{{ $shop->id }}">
+            <div id="collapsegooglemap{{ $shop->id }}">
                 <iframe
                     width="100%"
                     height="300vw"

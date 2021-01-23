@@ -85,9 +85,6 @@ class ShopController extends Controller
         $shoptypes = $this->shoptype->getAllShoptypes();
         $dayoffs = $this->dayoff->getAllDayoffs();
 
-
-
-
         foreach($dayoffs as $dayoff){
           $dayoff_check[$dayoff->id] = false;
           foreach($shop->dayoffs as $shopdayoff){
