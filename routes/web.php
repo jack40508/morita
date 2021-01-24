@@ -23,11 +23,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/backside', 'BacksideController@index');
 
-Route::group(['namespace' => 'Shop'],function(){
-    Route::resource('/backside/shop','ShopController');
+Route::group(['namespace' => 'Shop'], function(){
+    Route::resource('/backside/shop', 'ShopController');
 });
 
-Route::group(['namespace' => 'Product'],function(){
-    Route::resource('/backside/product','ProductController');
-    Route::resource('/backside/productkategorie','ProductkategorieController');
+Route::group(['namespace' => 'Product'], function(){
+    Route::get('/backside/product/search', 'ProductController@search');
+    Route::put('/backside/product/update_issell/{product_id}', 'ProductController@update_issell');
+    Route::put('/backside/product/update_selldate/{product_id}', 'ProductController@update_selldate');
+    Route::resource('/backside/product', 'ProductController');
+
+    Route::resource('/backside/productkategorie', 'ProductkategorieController');
 });

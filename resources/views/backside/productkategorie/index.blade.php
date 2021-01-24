@@ -17,18 +17,21 @@
             @foreach($productkategories as $productkategorie)
                 <tr>
                     <td>{{ $productkategorie->name }}</td>
-                    <td class="text-right">
+                    <td>
                         <div class="row justify-content-end">
-                            <div class="col-md-2">
-                                <a href="productkategorie/{{ $productkategorie->id }}" class="btn btn-info" role="button" aria-pressed="true">商品一覧</a>
+                            <div class="col-md-3">
+                                <a href="productkategorie/{{ $productkategorie->id }}" class="btn btn-info mt-1 mt-md-0 w-100" role="button" aria-pressed="true">商品一覧</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="productkategorie/{{ $productkategorie->id }}/edit" class="btn btn-success mt-1 mt-md-0 w-100" role="button" aria-pressed="true">編集</a>
                             </div>
                             <div class="col-md-2">
-                                <a href="productkategorie/{{ $productkategorie->id }}/edit" class="btn btn-success" role="button" aria-pressed="true">編集</a>
-                            </div>
-                            <div class="col-md-2">
-                                {!! Form::open(['url'=>'backside/productkategorie/'.$productkategorie->id,'method'=>'DELETE']) !!}
-                                  {!! Form::submit('削除',['class'=>'btn btn-danger']) !!}
-                                {!! Form::close() !!}
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-danger mt-1 mt-md-0 w-100" data-toggle="modal" data-target="#deleteModal{{ $productkategorie->id }}">
+                                    削除
+                                </button>
+                                <!-- Modal -->
+                                @include('backside.productkategorie.layouts.modal_delete_check')
                             </div>
                         </div>
                     </td>

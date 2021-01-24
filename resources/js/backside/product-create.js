@@ -1,5 +1,3 @@
-var sizeprice_id = 1;
-
 var btnAddSizeprice = document.getElementById('btn-add-sizeprice');
 var limitCheck = document.getElementById('limit-check');
 
@@ -34,7 +32,7 @@ btnAddSizeprice.onclick = function() {
 
     newBtnDeleteSizeprice.onclick = function(){
         var btn_id = parseInt(this.id.replace(/[^0-9]/ig,""));
-        console.log(btn_id);
+        //console.log(btn_id);
         var deleteDivSizeprice = document.getElementById("div-sizeprice" + btn_id);
 
         var divSizeprice = document.getElementById("div-sizeprice");
@@ -51,18 +49,31 @@ btnAddSizeprice.onclick = function() {
     divSizeprice.appendChild(newDivSizeprice);
 };
 
+//Size price delete button
+for(i=2; i<=sizeprice_id; i++){
+
+    btnDeleteSizeprice = document.getElementById("btn-delete-sizeprice" + i);
+
+    btnDeleteSizeprice.onclick = function(){
+        var btn_id = parseInt(this.id.replace(/[^0-9]/ig,""));
+        var deleteDivSizeprice = document.getElementById("div-sizeprice" + btn_id);
+        
+        var divSizeprice = document.getElementById("div-sizeprice");
+        divSizeprice.removeChild(deleteDivSizeprice);
+    }
+
+}
+
 //Chek limit date
 limitCheck.onclick = function() {
     var dateStart = document.getElementById('date-start');
     var dateEnd = document.getElementById('date-end');
 
     if (limitCheck.checked == true){
-        dateStart.disabled = false;
         dateEnd.disabled = false;
         dateStart.required = true;
         dateEnd.required = true;
     } else {
-        dateStart.disabled = true;
         dateEnd.disabled = true;
         dateStart.required = false;
         dateEnd.required = false;

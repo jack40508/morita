@@ -17,18 +17,21 @@
             @foreach($shops as $shop)
                 <tr>
                     <td>{{ $shop->name }}</td>
-                    <td class="text-right">
+                    <td>
                         <div class="row justify-content-end">
-                            <div class="col-md-2">
-                                <a href="shop/{{ $shop->id }}" class="btn btn-info" role="button" aria-pressed="true">詳細</a>
+                            <div class="col-md-3">
+                                <a href="shop/{{ $shop->id }}" class="btn btn-info w-100" role="button" aria-pressed="true">詳細</a>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="shop/{{ $shop->id }}/edit" class="btn btn-success mt-md-0 mt-1 w-100" role="button" aria-pressed="true">編集</a>
                             </div>
                             <div class="col-md-2">
-                                <a href="shop/{{ $shop->id }}/edit" class="btn btn-success" role="button" aria-pressed="true">編集</a>
-                            </div>
-                            <div class="col-md-2">
-                                {!! Form::open(['url'=>'backside/shop/'.$shop->id,'method'=>'DELETE']) !!}
-                                  {!! Form::submit('削除',['class'=>'btn btn-danger']) !!}
-                                {!! Form::close() !!}
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-danger mt-1 mt-md-0 w-100" data-toggle="modal" data-target="#deleteModal{{ $shop->id }}">
+                                    削除
+                                </button>
+                                <!-- Modal -->
+                                @include('backside.shop.layouts.modal_delete_check')
                             </div>
                         </div>
                     </td>

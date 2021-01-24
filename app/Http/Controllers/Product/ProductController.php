@@ -25,9 +25,10 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = $this->product->getAllProducts();
+        $products = $this->product->getAllProductsOrderBy('productkategorie_id');
+        $productkategories = $this->productkategorie->getAllProductkategories();
         
-        return view("backside.product.index",compact('products'));
+        return view("backside.product.index",compact('products', 'productkategories'));
     }
 
     /**
@@ -67,6 +68,20 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
+
+        return view("backside.product.show",compact('product'));
+    }
+
+    public function search(Request $request)
+    {
+        $products = $this->product->getSearchProducts($request);
+        $productkategories = $this->productkategorie->getAllProductkategories();
+
+        $search_name = $request->name;
+        $search_productkategories = $request->check_productkategories;
+        $search_status = $request->check_status;
+        
+        return view("backside.product.search",compact('products', 'productkategories', 'search_name', 'search_productkategories', 'search_status'));
     }
 
     /**
@@ -78,6 +93,9 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         //
+        $productkategories = $this->productkategorie->getAllProductkategoriesList();
+
+        return view("backside.product.edit",compact('product', 'productkategories'));
     }
 
     /**
@@ -90,6 +108,28 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         //
+        $this->product->updateProduct($request, $product);
+
+        return redirect('backside/product/'.$product->id);
+    }
+
+    public function update_issell(Request $request, $product_id)
+    {
+        //
+        $product = $this->product->getProductById($product_id);
+        $this->product->updateProductIsSell($request->is_sell, $product);
+
+        return redirect()->back();
+    }
+
+    public function update_selldate(Request $request, $product_id)
+    {
+        //
+        $product = $this->product->getProductById($product_id);
+
+        $this->product->updateProductSelldate($request->date_start, $request->date_end, $product);
+
+        return redirect()->back();
     }
 
     /**

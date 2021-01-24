@@ -15,25 +15,34 @@
             @foreach($productkategorie->products as $product)
                 <tr>
                     <td>{{ $product->name }}</td>
-                    <td>
+                    <td nowrap="nowrap">
                         @if($product->productsizes->count() == 1)
                             @foreach($product->productsizes as $productsizes)
-                                <p>{{ $productsizes->price }}</p>
+                                <p>{{ $productsizes->price }}円</p>
                             @endforeach
                         @elseif($product->productsizes->count() > 1)
                             @foreach($product->productsizes as $productsizes)
-                                <p>{{ $productsizes->size }} {{ $productsizes->price }}</p>
+                                <p>{{ $productsizes->size }}　{{ $productsizes->price }}円</p>
                             @endforeach
                         @endif
                     </td>
-                    @if($product->selldate != '1920-01-01' && $product->soldoutdate != '2119-12-31')
-                    <td class="text-center">
-                        <span class="badge badge-pill badge-danger mr-1">期間限定</span>
-                        {{ $product->selldate }}~{{ $product->soldoutdate }}
+                    <td>
+                        @if($product->is_sell)
+                            @if($product->soldoutdate != '2119-12-31')
+                                @if($product->selldate <= date('Y-m-d') && $product->soldoutdate >= date('Y-m-d'))
+                                    <p><span class="badge badge-pill badge-danger mr-1" data-toggle="tooltip" data-placement="top" title="{{ $product->selldate }}~{{ $product->soldoutdate }}">期間限定</span>{{ $product->selldate }}~{{ $product->soldoutdate }}</p>
+                                @elseif($product->soldoutdate < date('Y-m-d'))
+                                    <p><span class="badge badge-pill badge-secondary mr-1" data-toggle="tooltip" data-placement="top" title="{{ $product->selldate }}~{{ $product->soldoutdate }}">期間終了</span>{{ $product->selldate }}~{{ $product->soldoutdate }}</p>
+                                @elseif($product->selldate > date('Y-m-d'))
+                                    <p><span class="badge badge-pill badge-warning mr-1" data-toggle="tooltip" data-placement="top" title="{{ $product->selldate }}~{{ $product->soldoutdate }}">開催日待ち</span>{{ $product->selldate }}~{{ $product->soldoutdate }}</p>
+                                @endif
+                            @else
+                                <p><span class="badge badge-pill badge-success mr-1">通常販売</span></p>
+                            @endif
+                        @else
+                            <p><span class="badge badge-pill badge-secondary mr-1">販売中止</span></p>
+                        @endif
                     </td>
-                    @else
-                    <td></td>
-                    @endif
                 </tr>
             @endforeach
         </tbody>

@@ -10,7 +10,7 @@
 
         <div class="form-group row justify-content-md-center">
           {!! Form::submit('送信',['class'=>'btn btn-primary form-control col-md-4']) !!}
-          <a href="/backside/productkategorie" class="btn btn-secondary col-md-2 offset-md-1" role="button" aria-pressed="true">キャンセル</a>
+          <a href="{{ URL::previous() }}" class="btn btn-secondary col-md-2 offset-md-1" role="button" aria-pressed="true">キャンセル</a>
         </div>
     {!! Form::close() !!}
 @endsection

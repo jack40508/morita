@@ -1,6 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/js/backside/product.js": "/js/backside/product.js",
+    "/css/bs_style.css": "/css/bs_style.css",
+    "/css/bs_sidebar.css": "/css/bs_sidebar.css",
+    "/js/backside/product-create.js": "/js/backside/product-create.js",
+    "/js/backside/product-search.js": "/js/backside/product-search.js",
     "/js/popper.js": "/js/popper.js"
 }
