@@ -51,26 +51,26 @@
             if(!is_null($request->name)){
                 $products = $products->where('name', 'like', '%'.$request->name.'%');
             }
-    
+
             if(!is_null($request->check_productkategories)){
-                
+
                 $products = $products->where(function($query) use($request) {
                     foreach($request->check_productkategories as $key => $productkategorie){
                         if($key == 0){
                             $query->where('productkategorie_id', $productkategorie);
                         }
-                        
+
                         else{
                             $query->orWhere('productkategorie_id', $productkategorie);
                         }
-                        
+
                     }
-                    
+
                 });
             }
 
             if(!is_null($request->check_status)){
-                
+
                 $products = $products->where(function($query) use($request) {
                     foreach($request->check_status as $key => $status){
                         if($key == 0){
@@ -81,7 +81,7 @@
                                         $q->where('soldoutdate', '2119-12-31')->where('is_sell', true);
                                     });
                                     break;
-                                
+
                                 //期間限定
                                 case 2:
                                     $query->where('soldoutdate', '!=', '2119-12-31');
@@ -102,9 +102,9 @@
                                     $query->where('soldoutdate', '<', date('Y-m-d'));
                                     break;
                             }
-                            
+
                         }
-                        
+
                         else{
                             switch($status){
                                 //通常販売
@@ -113,7 +113,7 @@
                                         $q->where('soldoutdate', '2119-12-31')->where('is_sell', true);
                                     });
                                     break;
-                                
+
                                 //期間限定
                                 case 2:
                                     $query->orWhere('soldoutdate', '!=', '2119-12-31');
@@ -135,9 +135,9 @@
                                     break;
                             }
                         }
-                        
+
                     }
-                    
+
                 });
             }
 
@@ -164,7 +164,7 @@
 
             $newProduct->save();
 
-            $new_product_id = $this->getNewestProduct()->id;
+            $new_product_id = $this->getProduct()->id;
 
             for($i=0; $i<count($product->size); $i++){
                 $newProductsize = new Productsize;
@@ -217,7 +217,7 @@
                     $newProductsize->save();
                 }
             }
-            
+
             if(!is_null($request->product_img)){
                 //Product Img Save
                 $product_img_file = $request->product_img;

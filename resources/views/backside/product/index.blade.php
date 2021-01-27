@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>商品管理</h1>
-    
+
     <div class="text-right">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#productsearchModal">
@@ -11,7 +11,7 @@
 
         @include('backside.product.layouts.modal_search')
 
-        <a href="/backside/product/create" class="btn btn-primary ml-3" role="button" aria-pressed="true">商品追加</a>        
+        <a href="/backside/product/create" class="btn btn-primary ml-3" role="button" aria-pressed="true">商品追加</a>
     </div>
 
     <table class="table mt-3">
@@ -58,6 +58,9 @@
                                 <a href="/backside/product/{{ $product->id }}/edit" class="btn btn-success mt-1 mt-md-0 w-100" role="button" aria-pressed="true">編集</a>
                             </div>
                             <div class="col-md-3">
+                                @php
+                                    $from = "index"
+                                @endphp
                                 @if($product->is_sell)
                                     @if($product->soldoutdate != '2119-12-31')
                                         @if($product->selldate <= date('Y-m-d') && $product->soldoutdate >= date('Y-m-d'))
@@ -92,7 +95,7 @@
                                         <!-- Modal -->
                                         @include('backside.product.layouts.modal_stop_sell')
                                     @endif
-                                    
+
                                 @else
                                     <!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary mt-1 mt-md-0 w-100" data-toggle="modal" data-target="#isSellUpdateModal{{ $product->id }}">

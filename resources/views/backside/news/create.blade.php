@@ -47,5 +47,8 @@
         </div>
     {!! Form::close() !!}
 
+    <script>
+        var newsimageID = new Array();
+    </script>
     <script src="{{ asset('/js/backside/news-create-edit.js') }}"></script>
 @endsection

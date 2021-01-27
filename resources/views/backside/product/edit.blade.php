@@ -4,9 +4,12 @@
     <h1>商品編集</h1>
     <div class="row justify-content-md-end mb-3">
         <div class="col-4 col-md-2">
+            @php
+                $from = "edit"
+            @endphp
             @if($product->is_sell)
                 <!-- Button trigger modal -->
-                
+
                 <button type="button" class="btn btn-danger mt-1 mt-md-0 w-100" data-toggle="modal" data-target="#isSellUpdateModal{{ $product->id }}">
                     販売中止
                 </button>
@@ -42,23 +45,23 @@
                         {!! Form::label('サイズ/価格：', "", ['class'=>'col-md-2 text-md-right']) !!}
                         {!! Form::text('size[]', $productsize->size, ['class'=>'form-control col-md-2 col-4', 'required']) !!}
                         {!! Form::text('price[]', $productsize->price, ['class'=>'form-control col-md-2 col-4 offset-md-1 offset-1', 'required']) !!}
-                        <button class="btn btn-success col-md-2 offset-1 col-2" type="button" id="btn-add-sizeprice">追加</button>     
+                        <button class="btn btn-success col-md-2 offset-1 col-2" type="button" id="btn-add-sizeprice">追加</button>
                     </div>
                 @else
                     <div class="form-group row" id="div-sizeprice{{ $key+1 }}">
                         {!! Form::text('size[]', $productsize->size, ['class'=>'form-control col-md-2 col-4 offset-md-2', 'required']) !!}
                         {!! Form::text('price[]', $productsize->price, ['class'=>'form-control col-md-2 col-4 offset-md-1 offset-1', 'required']) !!}
-                        <button class="btn btn-danger col-md-2 offset-1 col-2" type="button" id="btn-delete-sizeprice{{ $key+1 }}">削除</button>     
+                        <button class="btn btn-danger col-md-2 offset-1 col-2" type="button" id="btn-delete-sizeprice{{ $key+1 }}">削除</button>
                     </div>
                 @endif
-            @endforeach            
-        </div> 
+            @endforeach
+        </div>
         <div class="form-group row">
             @if($product->selldate != '1920-01-01' && $product->soldoutdate != '2119-12-31')
                 <div class="col-md-2 text-md-right">
                     {!! Form::checkbox('limit', true, true, ['id'=>'limit-check']) !!}
                     {!! Form::label('期間限定：', "") !!}
-                </div>            
+                </div>
                 {!! Form::date('date_start', $product->selldate, ['class'=>'form-control col-md-2 col-4', 'id'=>'date-start']) !!}
                 <div class="col-md-1 col-2 text-center">～</div>
                 {!! Form::date('date_end', $product->soldoutdate, ['class'=>'form-control col-md-2 col-4', 'id'=>'date-end']) !!}
@@ -66,7 +69,7 @@
                 <div class="col-md-2 text-md-right">
                     {!! Form::checkbox('limit', true, false, ['id'=>'limit-check']) !!}
                     {!! Form::label('期間限定：', "") !!}
-                </div>            
+                </div>
                 {!! Form::date('date_start', $product->selldate, ['class'=>'form-control col-md-2 col-4', 'id'=>'date-start']) !!}
                 <div class="col-md-1 col-2 text-center">～</div>
                 {!! Form::date('date_end', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-end', 'disabled']) !!}
@@ -74,7 +77,7 @@
         </div>
         <div class="form-group row">
             {!! Form::label('商品画像：',"",['class'=>'col-md-2 text-md-right']) !!}
-            <img src="/img/product/product_{{ $product->id }}.jpg" alt="product_img" class="product_img">
+            <img src="/img/product/product_{{ $product->id }}.jpg" alt="product_img" class="product-img">
         </div>
         <div class="form-group row">
 		    {!! Form::label('商品画像変更：',"",['class'=>'col-md-2 text-md-right']) !!}

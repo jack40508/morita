@@ -16,7 +16,7 @@ class ProductController extends Controller
         $this->product = $product;
         $this->productkategorie = $productkategorie;
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -27,7 +27,7 @@ class ProductController extends Controller
         //
         $products = $this->product->getAllProductsOrderBy('productkategorie_id');
         $productkategories = $this->productkategorie->getAllProductkategories();
-        
+
         return view("backside.product.index",compact('products', 'productkategories'));
     }
 
@@ -80,7 +80,7 @@ class ProductController extends Controller
         $search_name = $request->name;
         $search_productkategories = $request->check_productkategories;
         $search_status = $request->check_status;
-        
+
         return view("backside.product.search",compact('products', 'productkategories', 'search_name', 'search_productkategories', 'search_status'));
     }
 
@@ -119,7 +119,11 @@ class ProductController extends Controller
         $product = $this->product->getProductById($product_id);
         $this->product->updateProductIsSell($request->is_sell, $product);
 
-        return redirect('backside/product/'.$product->id);
+        if($request->from == 'edit'){
+            return redirect('backside/product/'.$product->id);
+        }else{
+            return redirect()->back();
+        }
     }
 
     public function update_selldate(Request $request, $product_id)

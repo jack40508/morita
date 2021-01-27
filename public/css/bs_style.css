@@ -5,15 +5,23 @@
 **------------------------------------------------------------------------*/
 
 /*------------------------------------------------------------------------**
+** All                                                                    **
+**------------------------------------------------------------------------*/
+
+p {
+  margin-bottom: 0px;
+}
+
+/*------------------------------------------------------------------------**
 ** Product                                                                **
 **------------------------------------------------------------------------*/
 
-.product_img {
+.product-img {
   max-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .product_img {
+  .product-img {
     height: 20vh;
   }
 }
@@ -24,11 +32,26 @@
 
 .img-news {
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 768px) {
   .img-news {
     height: 30vh;
   }
+}
+
+.div-news-original-img {
+  opacity: 1;
+}
+
+.btn-delete-img {
+  border-radius: 50%;
+}
+
+.btn-delete-img:focus {
+  outline: 0;
+  box-shadow: none;
 }
 

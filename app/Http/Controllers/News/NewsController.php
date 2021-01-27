@@ -16,7 +16,7 @@ class NewsController extends Controller
         $this->news = $news;
         $this->newstag = $newstag;
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -78,6 +78,12 @@ class NewsController extends Controller
     public function edit(News $news)
     {
         //
+        $newstags = $this->newstag->getAllNewstags();
+
+        $news->content = str_replace('<br/>', "\r\n", $news->content);
+        $news->upload_at = str_replace(' ', "T", $news->upload_at);
+
+        return view('backside.news.edit', compact('news', 'newstags'));
     }
 
     /**
@@ -90,6 +96,9 @@ class NewsController extends Controller
     public function update(Request $request, News $news)
     {
         //
+        $this->news->updateNews($request, $news);
+
+        return redirect('backside/news/'.$news->id);
     }
 
     /**
@@ -98,8 +107,15 @@ class NewsController extends Controller
      * @param  \App\News  $news
      * @return \Illuminate\Http\Response
      */
-    public function destroy(News $news)
+    public function destroy(Request $request, News $news)
     {
         //
+        $this->news->changePermission($news);
+
+        if($request->from == 'edit'){
+            return redirect('backside/news/'.$news->id);
+        }else{
+            return redirect()->back();
+        }
     }
 }

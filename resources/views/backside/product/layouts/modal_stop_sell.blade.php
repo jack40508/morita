@@ -9,11 +9,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>商品「{{ $product->name }}」を販売中止にしますか？</p>    
+                <p>商品「{{ $product->name }}」を販売中止にしますか？</p>
             </div>
             <div class="modal-footer">
                 {!! Form::open(['url'=>'backside/product/update_issell/'.$product->id,'method'=>'PUT']) !!}
                 {!! Form::hidden('is_sell', false) !!}
+                {!! Form::hidden('from', $from) !!}
                 {!! Form::submit('中止', ['class'=>'btn btn-danger mt-1 mt-md-0 w-100']) !!}
                 {!! Form::close() !!}
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

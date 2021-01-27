@@ -32,4 +32,12 @@
                 return true;
             }
         }
+
+        public function clearAllNewsNewstagByNewsId($news_id){
+            $this->newsnewstag->where('news_id', $news_id)->delete();
+        }
+
+        public function clearAllNewsNewstagByNewstagId($newstag_id){
+            $this->newsnewstag->where('newstag_id', $newstag_id)->delete();
+        }
 }

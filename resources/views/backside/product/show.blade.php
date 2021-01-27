@@ -80,7 +80,7 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <p>商品画像</p>
-                            <img src="/img/product/product_{{ $product->id }}.jpg" alt="product_img" class="product_img">
+                            <img src="/img/product/product_{{ $product->id }}.jpg" alt="product_img" class="product-img">
                         </li>
                     </ul>
                 </div>

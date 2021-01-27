@@ -9,11 +9,12 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>商品「{{ $product->name }}」を販売発売にしますか？</p>    
+                <p>商品「{{ $product->name }}」を販売発売にしますか？</p>
             </div>
             <div class="modal-footer">
                 {!! Form::open(['url'=>'backside/product/update_issell/'.$product->id,'method'=>'PUT']) !!}
                 {!! Form::hidden('is_sell', true) !!}
+                {!! Form::hidden('from', $from) !!}
                 {!! Form::submit('発売', ['class'=>'btn btn-primary mt-1 mt-md-0 w-100']) !!}
                 {!! Form::close() !!}
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
