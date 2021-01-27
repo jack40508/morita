@@ -5,9 +5,16 @@ namespace App\Http\Controllers\News;
 use App\News\Newstag;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\News\NewstagRepository;
 
 class NewstagController extends Controller
 {
+    public function __construct(NewstagRepository $newstag)
+    {
+        $this->middleware('auth');
+        $this->newstag = $newstag;
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +23,9 @@ class NewstagController extends Controller
     public function index()
     {
         //
+        $newstags = $this->newstag->getAllNewstags();
+
+        return view('backside.newstag.index', compact('newstags'));
     }
 
     /**
@@ -26,6 +36,7 @@ class NewstagController extends Controller
     public function create()
     {
         //
+        return view('backside.newstag.create');
     }
 
     /**
@@ -37,6 +48,9 @@ class NewstagController extends Controller
     public function store(Request $request)
     {
         //
+        $this->newstag->createNewNewstag($request);
+
+        return redirect('backside/newstag/');
     }
 
     /**
@@ -59,6 +73,7 @@ class NewstagController extends Controller
     public function edit(Newstag $newstag)
     {
         //
+        return view('backside.newstag.edit', compact('newstag'));
     }
 
     /**
@@ -71,6 +86,9 @@ class NewstagController extends Controller
     public function update(Request $request, Newstag $newstag)
     {
         //
+        $this->newstag->updateNewstag($request, $newstag);
+
+        return redirect('backside/newstag/');
     }
 
     /**
@@ -82,5 +100,8 @@ class NewstagController extends Controller
     public function destroy(Newstag $newstag)
     {
         //
+        $this->newstag->deleteNewstag($newstag);
+
+        return redirect('backside/newstag/');
     }
 }

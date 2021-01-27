@@ -90,5 +90,5 @@
     <script>
         var sizeprice_id = {{ count($product->productsizes) }};
     </script>
-    <script src="{{ asset('/js/backside/product.js') }}"></script>
+    <script src="{{ asset('/js/backside/product-create-edit.js') }}"></script>
 @endsection

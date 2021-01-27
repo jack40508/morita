@@ -41,5 +41,5 @@
     <script>
         var sizeprice_id = 1;
     </script>
-    <script src="{{ asset('/js/backside/product-create.js') }}"></script>
+    <script src="{{ asset('/js/backside/product-create-edit.js') }}"></script>
 @endsection

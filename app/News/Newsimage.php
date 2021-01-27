@@ -3,29 +3,21 @@
 namespace App\News;
 
 use Illuminate\Database\Eloquent\Model;
-use App\News\Newstag;
-use App\News\Newsimage;
+use App\News\News;
 
-class News extends Model
+class Newsimage extends Model
 {
     //
-    protected $table = 'news';
+    protected $table = 'newsimages';
     protected $fillable = [
-      'title',
-      'content',
-      'permission',
-      'upload_at',
+      'news_id',
     ];
 
     /*------------------------------------------------------------------------**
     ** Relation 定義                                                          **
     **------------------------------------------------------------------------*/
 
-    public function newstags(){
-        return $this->belongsToMany(Newstag::class);
+    public function news(){
+        return $this->belongsTo(News::class);
     }
-
-    public function newsimages(){
-      return $this->hasMany(Newsimage::class);
-  }
 }

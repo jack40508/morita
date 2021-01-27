@@ -15,8 +15,7 @@ class CreateNewstagsTable extends Migration
     {
         Schema::create('newstags', function (Blueprint $table) {
             $table->id();
-            $table->integer('news_id');
-            $table->integer('newstag_id');
+            $table->string('name');
             $table->timestamps();
         });
     }

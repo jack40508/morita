@@ -18,7 +18,10 @@
             <a href="/backside/productkategorie">商品カテゴリー管理</a>
         </li>
         <li>
-            <a href="/backside/news">お知らせ</a>
+            <a href="/backside/news">お知らせ管理</a>
+        </li>
+        <li>
+            <a href="/backside/newstag">お知らせタグ管理</a>
         </li>
     </ul>
 </div>

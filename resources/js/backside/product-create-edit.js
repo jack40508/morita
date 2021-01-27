@@ -17,7 +17,6 @@ btnAddSizeprice.onclick = function() {
     newInputSize.type= "text";
     newInputSize.required = true;
 
-
     var newInputPrice = document.createElement('input');
     newInputPrice.className = "form-control col-md-2 col-4 offset-md-1 offset-1";
     newInputPrice.name = "price[]";

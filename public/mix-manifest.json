@@ -3,7 +3,8 @@
     "/css/app.css": "/css/app.css",
     "/css/bs_style.css": "/css/bs_style.css",
     "/css/bs_sidebar.css": "/css/bs_sidebar.css",
-    "/js/backside/product-create.js": "/js/backside/product-create.js",
+    "/js/backside/news-create-edit.js": "/js/backside/news-create-edit.js",
+    "/js/backside/product-create-edit.js": "/js/backside/product-create-edit.js",
     "/js/backside/product-search.js": "/js/backside/product-search.js",
     "/js/popper.js": "/js/popper.js"
 }

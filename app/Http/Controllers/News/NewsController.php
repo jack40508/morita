@@ -5,9 +5,18 @@ namespace App\Http\Controllers\News;
 use App\News\News;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\News\NewsRepository;
+use App\News\NewstagRepository;
 
 class NewsController extends Controller
 {
+    public function __construct(NewsRepository $news, NewstagRepository $newstag)
+    {
+        $this->middleware('auth');
+        $this->news = $news;
+        $this->newstag = $newstag;
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +25,9 @@ class NewsController extends Controller
     public function index()
     {
         //
+        $news = $this->news->getAllNews();
+
+        return view('backside.news.index', compact('news'));
     }
 
     /**
@@ -26,6 +38,9 @@ class NewsController extends Controller
     public function create()
     {
         //
+        $newstags = $this->newstag->getAllNewstags();
+
+        return view('backside.news.create', compact('newstags'));
     }
 
     /**
@@ -37,6 +52,9 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         //
+        $this->news->createNewNews($request);
+
+        return redirect('backside/news/');
     }
 
     /**
@@ -48,6 +66,7 @@ class NewsController extends Controller
     public function show(News $news)
     {
         //
+        return view('backside.news.show', compact('news'));
     }
 
     /**

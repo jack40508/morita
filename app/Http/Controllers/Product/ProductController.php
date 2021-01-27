@@ -119,7 +119,7 @@ class ProductController extends Controller
         $product = $this->product->getProductById($product_id);
         $this->product->updateProductIsSell($request->is_sell, $product);
 
-        return redirect()->back();
+        return redirect('backside/product/'.$product->id);
     }
 
     public function update_selldate(Request $request, $product_id)
