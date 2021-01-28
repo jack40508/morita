@@ -6,5 +6,6 @@
     "/js/backside/news-create-edit.js": "/js/backside/news-create-edit.js",
     "/js/backside/product-create-edit.js": "/js/backside/product-create-edit.js",
     "/js/backside/product-search.js": "/js/backside/product-search.js",
+    "/js/backside/sidebar.js": "/js/backside/sidebar.js",
     "/js/popper.js": "/js/popper.js"
 }

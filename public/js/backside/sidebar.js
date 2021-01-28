@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/backside/product-search.js":
-/*!*************************************************!*\
-  !*** ./resources/js/backside/product-search.js ***!
-  \*************************************************/
+/***/ "./resources/js/backside/sidebar.js":
+/*!******************************************!*\
+  !*** ./resources/js/backside/sidebar.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("document.getElementById('search_name').value = search_name;\n\nfor (i = 0; i < check_productkategories.length; i++) {\n  document.getElementById('check_productkategories' + check_productkategories[i]).checked = true;\n}\n\nfor (i = 0; i < check_status.length; i++) {\n  document.getElementById('check_status' + check_status[i]).checked = true;\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYmFja3NpZGUvcHJvZHVjdC1zZWFyY2guanM/YjcxMiJdLCJuYW1lcyI6WyJkb2N1bWVudCIsImdldEVsZW1lbnRCeUlkIiwidmFsdWUiLCJzZWFyY2hfbmFtZSIsImkiLCJjaGVja19wcm9kdWN0a2F0ZWdvcmllcyIsImxlbmd0aCIsImNoZWNrZWQiLCJjaGVja19zdGF0dXMiXSwibWFwcGluZ3MiOiJBQUFBQSxRQUFRLENBQUNDLGNBQVQsQ0FBd0IsYUFBeEIsRUFBdUNDLEtBQXZDLEdBQStDQyxXQUEvQzs7QUFFQSxLQUFJQyxDQUFDLEdBQUMsQ0FBTixFQUFTQSxDQUFDLEdBQUNDLHVCQUF1QixDQUFDQyxNQUFuQyxFQUEyQ0YsQ0FBQyxFQUE1QyxFQUErQztBQUMzQ0osVUFBUSxDQUFDQyxjQUFULENBQXdCLDRCQUE0QkksdUJBQXVCLENBQUNELENBQUQsQ0FBM0UsRUFBZ0ZHLE9BQWhGLEdBQTBGLElBQTFGO0FBQ0g7O0FBRUQsS0FBSUgsQ0FBQyxHQUFDLENBQU4sRUFBU0EsQ0FBQyxHQUFDSSxZQUFZLENBQUNGLE1BQXhCLEVBQWdDRixDQUFDLEVBQWpDLEVBQW9DO0FBQ2hDSixVQUFRLENBQUNDLGNBQVQsQ0FBd0IsaUJBQWlCTyxZQUFZLENBQUNKLENBQUQsQ0FBckQsRUFBMERHLE9BQTFELEdBQW9FLElBQXBFO0FBQ0giLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYmFja3NpZGUvcHJvZHVjdC1zZWFyY2guanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc2VhcmNoX25hbWUnKS52YWx1ZSA9IHNlYXJjaF9uYW1lO1xyXG5cclxuZm9yKGk9MDsgaTxjaGVja19wcm9kdWN0a2F0ZWdvcmllcy5sZW5ndGg7IGkrKyl7XHJcbiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2hlY2tfcHJvZHVjdGthdGVnb3JpZXMnICsgY2hlY2tfcHJvZHVjdGthdGVnb3JpZXNbaV0pLmNoZWNrZWQgPSB0cnVlO1xyXG59XHJcblxyXG5mb3IoaT0wOyBpPGNoZWNrX3N0YXR1cy5sZW5ndGg7IGkrKyl7XHJcbiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2hlY2tfc3RhdHVzJyArIGNoZWNrX3N0YXR1c1tpXSkuY2hlY2tlZCA9IHRydWU7XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/backside/product-search.js\n");
+eval("var location = window.location.href.toString();\n\nif (location.search(\"news\") != -1) {\n  document.getElementById('collapseNews').classList.add(\"show\");\n} else if (location.search(\"product\") != -1) {\n  document.getElementById('collapseProduct').classList.add(\"show\");\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYmFja3NpZGUvc2lkZWJhci5qcz9hMTI1Il0sIm5hbWVzIjpbImxvY2F0aW9uIiwid2luZG93IiwiaHJlZiIsInRvU3RyaW5nIiwic2VhcmNoIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCIsImNsYXNzTGlzdCIsImFkZCJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsUUFBUSxHQUFHQyxNQUFNLENBQUNELFFBQVAsQ0FBZ0JFLElBQWhCLENBQXFCQyxRQUFyQixFQUFmOztBQUVBLElBQUdILFFBQVEsQ0FBQ0ksTUFBVCxDQUFnQixNQUFoQixLQUEyQixDQUFDLENBQS9CLEVBQWlDO0FBQzdCQyxVQUFRLENBQUNDLGNBQVQsQ0FBd0IsY0FBeEIsRUFBd0NDLFNBQXhDLENBQWtEQyxHQUFsRCxDQUFzRCxNQUF0RDtBQUNILENBRkQsTUFFTSxJQUFHUixRQUFRLENBQUNJLE1BQVQsQ0FBZ0IsU0FBaEIsS0FBOEIsQ0FBQyxDQUFsQyxFQUFvQztBQUN0Q0MsVUFBUSxDQUFDQyxjQUFULENBQXdCLGlCQUF4QixFQUEyQ0MsU0FBM0MsQ0FBcURDLEdBQXJELENBQXlELE1BQXpEO0FBQ0giLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYmFja3NpZGUvc2lkZWJhci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBsb2NhdGlvbiA9IHdpbmRvdy5sb2NhdGlvbi5ocmVmLnRvU3RyaW5nKCk7XHJcblxyXG5pZihsb2NhdGlvbi5zZWFyY2goXCJuZXdzXCIpICE9IC0xKXtcclxuICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjb2xsYXBzZU5ld3MnKS5jbGFzc0xpc3QuYWRkKFwic2hvd1wiKTtcclxufWVsc2UgaWYobG9jYXRpb24uc2VhcmNoKFwicHJvZHVjdFwiKSAhPSAtMSl7XHJcbiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY29sbGFwc2VQcm9kdWN0JykuY2xhc3NMaXN0LmFkZChcInNob3dcIik7XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/backside/sidebar.js\n");
 
 /***/ }),
 
-/***/ 3:
-/*!*******************************************************!*\
-  !*** multi ./resources/js/backside/product-search.js ***!
-  \*******************************************************/
+/***/ 1:
+/*!************************************************!*\
+  !*** multi ./resources/js/backside/sidebar.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\morita\resources\js\backside\product-search.js */"./resources/js/backside/product-search.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\morita\resources\js\backside\sidebar.js */"./resources/js/backside/sidebar.js");
 
 
 /***/ })

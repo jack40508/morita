@@ -31,7 +31,10 @@
             {!! Form::label('タイトル：',"",['class'=>'col-md-2 text-md-right']) !!}
             {!! Form::text('title', $news->title, ['class'=>'form-control col-md-8','required']) !!}
         </div>
-
+        <div class="form-group row">
+            {!! Form::label('カテゴリー：', "", ['class'=>'col-md-2 text-md-right']) !!}
+            {!! Form::select('newskategorie', $newskategories, $news->newskategorie_id, ['class'=>'form-control col-md-8', 'placeholder'=>'カテゴリーを選択してください', 'required'] ) !!}
+        </div>
         <div class="form-group row">
             {!! Form::label('タグ：', "", ['class'=>'col-md-2 text-md-right']) !!}
             <div class="col-md-8">

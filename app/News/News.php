@@ -5,6 +5,7 @@ namespace App\News;
 use Illuminate\Database\Eloquent\Model;
 use App\News\Newstag;
 use App\News\Newsimage;
+use App\News\Newskategorie;
 
 class News extends Model
 {
@@ -14,6 +15,7 @@ class News extends Model
       'title',
       'content',
       'permission',
+      'kategorie_id',
       'upload_at',
     ];
 
@@ -26,6 +28,11 @@ class News extends Model
     }
 
     public function newsimages(){
-      return $this->hasMany(Newsimage::class);
-  }
+        return $this->hasMany(Newsimage::class);
+    }
+
+    public function newskategorie(){
+        return $this->belongsTo(Newskategorie::class);
+    }
+
 }

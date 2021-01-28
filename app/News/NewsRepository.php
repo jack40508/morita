@@ -38,6 +38,7 @@
                 $newNews->upload_at = str_replace("T", " ", $request->datetime_uploadat);
             }
             $newNews->content = str_replace("\r\n",'<br/>', $request->content);
+            $newNews->newskategorie_id = $request->newskategorie;
 
             $newNews->save();
 
@@ -97,6 +98,7 @@
                 $news->upload_at = str_replace("T", " ", date('Y/m/d H:i:s'));
             }
             $news->content = str_replace("\r\n",'<br/>', $request->content);
+            $news->newskategorie_id = $request->newskategorie;
 
             $this->newsnewstag->clearAllNewsNewstagByNewsId($news->id);
 

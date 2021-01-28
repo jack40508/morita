@@ -39,4 +39,5 @@ Route::group(['namespace' => 'Product'], function(){
 Route::group(['namespace' => 'News'], function(){
     Route::resource('/backside/news', 'NewsController');
     Route::resource('/backside/newstag', 'NewstagController');
+    Route::resource('/backside/newskategorie', 'NewskategorieController');
 });

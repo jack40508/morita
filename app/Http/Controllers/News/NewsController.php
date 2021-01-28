@@ -7,14 +7,16 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\News\NewsRepository;
 use App\News\NewstagRepository;
+use App\News\NewskategorieRepository;
 
 class NewsController extends Controller
 {
-    public function __construct(NewsRepository $news, NewstagRepository $newstag)
+    public function __construct(NewsRepository $news, NewstagRepository $newstag, NewskategorieRepository $newskategorie)
     {
         $this->middleware('auth');
         $this->news = $news;
         $this->newstag = $newstag;
+        $this->newskategorie = $newskategorie;
     }
 
     /**
@@ -39,8 +41,9 @@ class NewsController extends Controller
     {
         //
         $newstags = $this->newstag->getAllNewstags();
+        $newskategories = $this->newskategorie->getAllNewskategoriesList();
 
-        return view('backside.news.create', compact('newstags'));
+        return view('backside.news.create', compact('newstags', 'newskategories'));
     }
 
     /**
@@ -79,11 +82,12 @@ class NewsController extends Controller
     {
         //
         $newstags = $this->newstag->getAllNewstags();
+        $newskategories = $this->newskategorie->getAllNewskategoriesList();
 
         $news->content = str_replace('<br/>', "\r\n", $news->content);
         $news->upload_at = str_replace(' ', "T", $news->upload_at);
 
-        return view('backside.news.edit', compact('news', 'newstags'));
+        return view('backside.news.edit', compact('news', 'newstags', 'newskategories'));
     }
 
     /**

@@ -18,6 +18,20 @@
                         <li class="list-group-item">
                             <div class="row">
                                 <div class="col-md-2">
+                                    <p>カテゴリー</p>
+                                </div>
+                                <div class="col-md-10">
+                                    @if($news->newskategorie_id == -1)
+                                        <p>未選択</p>
+                                    @else
+                                        <p>{{ $news->newskategorie->name }}</p>
+                                    @endif
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-2">
                                     <p>タグ</p>
                                 </div>
                                 <div class="col-md-10">
@@ -52,7 +66,7 @@
                                 <div class="col-md-2">
                                     <p>内容</p>
                                 </div>
-                                <div class="col-md-12 mt-3">
+                                <div class="col-md-12">
                                     <p>
                                         {!! $news->content !!}
                                     </p>

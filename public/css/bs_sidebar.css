@@ -82,6 +82,10 @@
     background: none;
 }
 
+.sidebar-nav ul{
+    list-style-type:none;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
