@@ -74,6 +74,16 @@
                                 </div>
                             </div>
                         </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p>説明</p>
+                                </div>
+                                <div class="col-md-8">
+                                    <p>{!! $product->description !!}</p>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-6 md-12">

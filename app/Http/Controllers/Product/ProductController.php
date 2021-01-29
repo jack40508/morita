@@ -94,6 +94,7 @@ class ProductController extends Controller
     {
         //
         $productkategories = $this->productkategorie->getAllProductkategoriesList();
+        $product->description = str_replace('<br/>', "\r\n", $product->description);
 
         return view("backside.product.edit",compact('product', 'productkategories'));
     }

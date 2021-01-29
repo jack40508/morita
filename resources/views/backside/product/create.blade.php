@@ -29,6 +29,10 @@
             {!! Form::date('date_end', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-end', 'min'=>date('Y-m-d'), 'disabled']) !!}
         </div>
         <div class="form-group row">
+            {!! Form::label('説明：',"",['class'=>'col-md-2 text-md-right']) !!}
+            {!! Form::textarea('description', null, ['class'=>'form-control col-md-8']) !!}
+        </div>
+        <div class="form-group row">
 		    {!! Form::label('商品画像：',"",['class'=>'col-md-2 text-md-right']) !!}
             {!! Form::file('product_img', ['required']) !!}
 		</div>

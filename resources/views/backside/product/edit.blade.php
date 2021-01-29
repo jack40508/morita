@@ -76,6 +76,10 @@
             @endif
         </div>
         <div class="form-group row">
+            {!! Form::label('説明：',"",['class'=>'col-md-2 text-md-right']) !!}
+            {!! Form::textarea('description', $product->description, ['class'=>'form-control col-md-8']) !!}
+        </div>
+        <div class="form-group row">
             {!! Form::label('商品画像：',"",['class'=>'col-md-2 text-md-right']) !!}
             <img src="/img/product/product_{{ $product->id }}.jpg" alt="product_img" class="product-img">
         </div>

@@ -149,6 +149,7 @@
 
             $newProduct->name = $product->name;
             $newProduct->productkategorie_id = $product->productkategories;
+            $newProduct->description = str_replace("\r\n",'<br/>', $product->description);
 
             if($product->limit){
                 $newProduct->selldate = $product->date_start;
@@ -183,6 +184,7 @@
         public function updateProduct($request, $product){
             $product->name = $request->name;
             $product->productkategorie_id = $request->productkategories;
+            $product->description = str_replace("\r\n",'<br/>', $request->description);
 
             if($request->limit){
                 $product->selldate = $request->date_start;

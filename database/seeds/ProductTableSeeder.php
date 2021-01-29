@@ -16,7 +16,6 @@ class ProductTableSeeder extends Seeder
             'name' => '濃厚ショコラロール',
             'productkategorie_id' => '1',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
 
@@ -32,7 +31,6 @@ class ProductTableSeeder extends Seeder
             'name' => '畷プレミアムプリン',
             'productkategorie_id' => '2',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
 
@@ -40,7 +38,6 @@ class ProductTableSeeder extends Seeder
             'name' => 'MORITAマカロン',
             'productkategorie_id' => '3',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
 
@@ -48,7 +45,6 @@ class ProductTableSeeder extends Seeder
             'name' => 'シナモン風味焼きドーナツ',
             'productkategorie_id' => '4',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
 
@@ -56,7 +52,6 @@ class ProductTableSeeder extends Seeder
             'name' => 'アップルパイ',
             'productkategorie_id' => '5',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
 
@@ -64,7 +59,6 @@ class ProductTableSeeder extends Seeder
             'name' => '濃厚ショコラケーキ',
             'productkategorie_id' => '6',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
 
@@ -72,7 +66,6 @@ class ProductTableSeeder extends Seeder
             'name' => '極みバーム、ハード',
             'productkategorie_id' => '7',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
 
@@ -80,7 +73,6 @@ class ProductTableSeeder extends Seeder
             'name' => '窯出しシュー',
             'productkategorie_id' => '8',
             'is_sell' => true,
-            'selldate' => '1920/1/1',
             'soldoutdate' => '2119/12/31',
         ]);
     }
