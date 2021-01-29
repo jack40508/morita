@@ -40,4 +40,4 @@
         public function clearAllNewsNewstagByNewstagId($newstag_id){
             $this->newsnewstag->where('newstag_id', $newstag_id)->delete();
         }
-}
+    }

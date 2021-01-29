@@ -16,6 +16,7 @@ mix.js('resources/js/app.js', 'public/js')
     .js("resources/js/backside/product-create-edit.js", 'public/js/backside/')
     .js("resources/js/backside/product-search.js", 'public/js/backside/')
     .js("resources/js/backside/news-create-edit.js", 'public/js/backside/')
+    .js("resources/js/backside/page-change.js", 'public/js/backside/')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/bs_style.scss', 'public/css')
     .postCss('resources/css/bs_sidebar.css', 'public/css');

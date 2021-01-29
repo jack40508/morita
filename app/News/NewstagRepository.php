@@ -63,4 +63,4 @@
             $this->newsnewstag->clearAllNewsNewstagByNewstagId($newstag->id);
             $newstag->delete();
         }
-}
+    }

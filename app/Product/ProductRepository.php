@@ -164,11 +164,9 @@
 
             $newProduct->save();
 
-            $new_product_id = $this->getProduct()->id;
-
             for($i=0; $i<count($product->size); $i++){
                 $newProductsize = new Productsize;
-                $newProductsize->product_id = $new_product_id;
+                $newProductsize->product_id = $newProduct->id;
                 $newProductsize->size = $product->size[$i];
                 $newProductsize->price = $product->price[$i];
                 $newProductsize->save();
@@ -178,7 +176,7 @@
             $product_img_file = $product->product_img;
             $product_img_path = $product->product_img->path();
             $product_img_extension = $product->product_img->extension();
-            $product_img_filename = 'product_'.$new_product_id.'.jpg';
+            $product_img_filename = 'product_'.$newProduct->id.'.jpg';
             $product_img_upload_success = $product_img_file->move('img/product', $product_img_filename, $product_img_extension);
         }
 

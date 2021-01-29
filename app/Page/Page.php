@@ -18,6 +18,6 @@ class Page extends Model
     **------------------------------------------------------------------------*/
 
     public function bannerimages(){
-        return $this->belongsToMany(Bannerimage::class);
+        return $this->belongsToMany(Bannerimage::class, 'page_bannerimages')->withPivot('id', 'start_at', 'end_at', 'updated_at');
     }
 }

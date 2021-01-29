@@ -4,6 +4,7 @@
     "/css/bs_style.css": "/css/bs_style.css",
     "/css/bs_sidebar.css": "/css/bs_sidebar.css",
     "/js/backside/news-create-edit.js": "/js/backside/news-create-edit.js",
+    "/js/backside/page-change.js": "/js/backside/page-change.js",
     "/js/backside/product-create-edit.js": "/js/backside/product-create-edit.js",
     "/js/backside/product-search.js": "/js/backside/product-search.js",
     "/js/backside/sidebar.js": "/js/backside/sidebar.js",

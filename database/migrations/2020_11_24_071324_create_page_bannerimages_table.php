@@ -17,6 +17,9 @@ class CreatePageBannerimagesTable extends Migration
             $table->id();
             $table->integer('page_id');
             $table->integer('bannerimage_id');
+            $table->boolean('reserve')->default(false);
+            $table->date('start_at')->default(date('Y/m/d H:i:s'));
+            $table->date('end_at')->default('2119/12/31');
             $table->timestamps();
         });
     }

@@ -9,7 +9,7 @@
             <a href="/backside/shop">店舗管理</a>
         </li>
         <li>
-            <a href="/backside/page">画面管理</a>
+            <a href="/backside/page">ページ画面管理</a>
         </li>
         <li>
             <a data-toggle="collapse" href="#collapseProduct" >商品管理</a>

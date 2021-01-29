@@ -34,7 +34,7 @@
                 {!! Form::checkbox('check_uploaddatetime', true, false, ['id'=>'check_uploaddatetime']) !!}
                 {!! Form::label('アップロード予約：', "") !!}
             </div>
-            {!! Form::input('dateTime-local','datetime_uploadat', "", ['class'=>'form-control col-md-8 col-12', 'id'=>'datetime-uploaddatetime', 'disabled']) !!}
+            {!! Form::input('dateTime-local','datetime_uploadat', "", ['class'=>'form-control col-md-8 col-12', 'id'=>'datetime-uploaddatetime', 'min'=>date('Y-m-d').'T'.date('H:i'), 'disabled']) !!}
         </div>
         <div class="form-group row">
             {!! Form::label('内容：',"",['class'=>'col-md-2 text-md-right']) !!}

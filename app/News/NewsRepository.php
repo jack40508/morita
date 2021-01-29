@@ -187,4 +187,4 @@
         public function deleteNews($news){
             $news->delete();
         }
-}
+    }

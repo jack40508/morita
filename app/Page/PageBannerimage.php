@@ -11,5 +11,8 @@ class PageBannerimage extends Model
     protected $fillable = [
       'page_id',
       'bannerimage_id',
+      'reserve',
+      'start_at',
+      'end_at',
     ];
 }

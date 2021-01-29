@@ -70,9 +70,9 @@
                     {!! Form::checkbox('limit', true, false, ['id'=>'limit-check']) !!}
                     {!! Form::label('期間限定：', "") !!}
                 </div>
-                {!! Form::date('date_start', $product->selldate, ['class'=>'form-control col-md-2 col-4', 'id'=>'date-start']) !!}
+                {!! Form::date('date_start', $product->selldate, ['class'=>'form-control col-md-2 col-4', 'id'=>'date-start', 'min'=>date('Y-m-d')]) !!}
                 <div class="col-md-1 col-2 text-center">～</div>
-                {!! Form::date('date_end', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-end', 'disabled']) !!}
+                {!! Form::date('date_end', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-end', 'min'=>date('Y-m-d'), 'disabled']) !!}
             @endif
         </div>
         <div class="form-group row">

@@ -16,17 +16,17 @@
                 {!! Form::label('サイズ/価格：', "", ['class'=>'col-md-2 text-md-right']) !!}
                 {!! Form::text('size[]', "", ['class'=>'form-control col-md-2 col-4', 'required']) !!}
                 {!! Form::text('price[]', "", ['class'=>'form-control col-md-2 col-4 offset-md-1 offset-1', 'required']) !!}
-                <button class="btn btn-success col-md-2 offset-1 col-2" type="button" id="btn-add-sizeprice">追加</button>     
+                <button class="btn btn-success col-md-2 offset-1 col-2" type="button" id="btn-add-sizeprice">追加</button>
             </div>
-        </div> 
+        </div>
         <div class="form-group row">
             <div class="col-md-2 text-md-right">
                 {!! Form::checkbox('limit', true, false, ['id'=>'limit-check']) !!}
                 {!! Form::label('期間限定：', "") !!}
-            </div>            
-            {!! Form::date('date_start', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-start']) !!}
+            </div>
+            {!! Form::date('date_start', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-start', 'min'=>date('Y-m-d')]) !!}
             <div class="col-md-1 col-2 text-center">～</div>
-            {!! Form::date('date_end', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-end', 'disabled']) !!}
+            {!! Form::date('date_end', "", ['class'=>'form-control col-md-2 col-4', 'id'=>'date-end', 'min'=>date('Y-m-d'), 'disabled']) !!}
         </div>
         <div class="form-group row">
 		    {!! Form::label('商品画像：',"",['class'=>'col-md-2 text-md-right']) !!}

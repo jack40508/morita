@@ -80,4 +80,4 @@
         public function destroyShop(Shop $shop){
             $shop->delete();
         }
-}
+    }

@@ -19,6 +19,6 @@
         }
 
         public function deleteDayoff($shop_id){
-            
+
         }
-}
+    }

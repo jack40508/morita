@@ -12,19 +12,27 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'MoritaController@home');
+Route::get('/home', 'MoritaController@home')->name('home');
+Route::get('/home', 'MoritaController@home')->name('menu');
+Route::get('/home', 'MoritaController@home')->name('news');
+Route::get('/home', 'MoritaController@home')->name('consept');
+Route::get('/home', 'MoritaController@home')->name('access');
 
+
+//Backside
 Route::get('/backside', 'BacksideController@index');
 
 Route::group(['namespace' => 'Shop'], function(){
     Route::resource('/backside/shop', 'ShopController');
+});
+
+Route::group(['namespace' => 'Page'], function(){
+    Route::delete('backside/page/{page_id}/deletereserve/{reserve_id}', 'PageController@destroy_reserve');
+    Route::put('/backside/page/changebanner/{page_id}', 'PageController@changebanner');
+    Route::resource('/backside/page', 'PageController');
 });
 
 Route::group(['namespace' => 'Product'], function(){

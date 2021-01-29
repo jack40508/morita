@@ -10,7 +10,6 @@ class Bannerimage extends Model
     //
     protected $table = 'BannerImages';
     protected $fillable = [
-      'name',
     ];
 
     /*------------------------------------------------------------------------**

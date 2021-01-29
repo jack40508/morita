@@ -15,8 +15,6 @@ class CreateBannerimagesTable extends Migration
     {
         Schema::create('bannerimages', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('about');
             $table->timestamps();
         });
     }

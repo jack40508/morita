@@ -65,7 +65,7 @@
             @if(strtotime(date('Y/m/d H:i:s')) < strtotime($news->upload_at))
                 {!! Form::input('dateTime-local','datetime_uploadat', $news->upload_at, ['class'=>'form-control col-md-8 col-12', 'id'=>'datetime-uploaddatetime']) !!}
             @else
-                {!! Form::input('dateTime-local','datetime_uploadat', "", ['class'=>'form-control col-md-8 col-12', 'id'=>'datetime-uploaddatetime', 'disabled']) !!}
+                {!! Form::input('dateTime-local','datetime_uploadat', "", ['class'=>'form-control col-md-8 col-12', 'id'=>'datetime-uploaddatetime', 'min'=>date('Y-m-d').'T'.date('H:i'), 'disabled']) !!}
             @endif
         </div>
         <div class="form-group row">

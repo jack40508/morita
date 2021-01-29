@@ -32,6 +32,12 @@
         }
 
         public function destroyNewskategorie(Newskategorie $newskategorie){
+            $news = $newskategorie->news;
+            foreach($news as $news){
+                $news->newskategorie_id = -1;
+                $news->save();
+            }
+
             $newskategorie->delete();
         }
-}
+    }
