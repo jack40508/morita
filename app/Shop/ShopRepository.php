@@ -26,6 +26,12 @@
             return $shop;
         }
 
+        public function getFirstShopByColumnName($column_name, $request){
+            $shop = $this->shop->where($column_name, $request)->first();
+
+            return $shop;
+        }
+
         public function createShop(Request $request){
 
             $newshop = new Shop;

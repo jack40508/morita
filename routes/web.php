@@ -16,10 +16,12 @@ Auth::routes();
 
 Route::get('/', 'MoritaController@home');
 Route::get('/home', 'MoritaController@home')->name('home');
-Route::get('/home', 'MoritaController@home')->name('menu');
-Route::get('/home', 'MoritaController@home')->name('news');
-Route::get('/home', 'MoritaController@home')->name('consept');
-Route::get('/home', 'MoritaController@home')->name('access');
+Route::get('/menu', 'MoritaController@menu')->name('menu');
+Route::get('/menu/{menu_id}', 'MoritaController@menu_show');
+Route::get('/news', 'MoritaController@news')->name('news');
+Route::get('/news/{news_id}', 'MoritaController@news_show');
+Route::get('/consept', 'MoritaController@consept')->name('consept');
+Route::get('/access', 'MoritaController@access')->name('access');
 
 
 //Backside

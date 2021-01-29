@@ -20,13 +20,6 @@
             return $newstags;
         }
 
-        public function getNewestNewstag(){
-
-            $newstag = $this->newstag->orderBy('updated_at', 'DESC')->orderBy('id', 'DESC')->first();
-
-            return $newstag;
-        }
-
         public function getNewstagByColumnName($column_name, $request){
 
             $newstags = $this->newstag->where($column_name, $request)->get();

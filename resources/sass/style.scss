@@ -1,0 +1,225 @@
+/*------------------------------------------------------------------------**
+** レスポンシブ設定                                                        **
+**------------------------------------------------------------------------*/
+
+// 変数の定義
+// min-width
+$breakpoint-up: (
+    'sm': 'screen and (min-width: 400px)',
+    'md': 'screen and (min-width: 768px)',
+    'lg': 'screen and (min-width: 1000px)',
+    'xl': 'screen and (min-width: 1200px)',
+) !default;
+
+// max-width
+$breakpoint-down: (
+    'sm': 'screen and (max-width: 399px)',
+    'md': 'screen and (max-width: 767px)',
+    'lg': 'screen and (max-width: 999px)',
+    'xl': 'screen and (max-width: 1199px)',
+) !default;
+
+// @mixinの定義
+@mixin mq-up($breakpoint: md) {
+    @media #{map-get($breakpoint-up, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin mq-down($breakpoint: md) {
+    @media #{map-get($breakpoint-down, $breakpoint)} {
+        @content;
+    }
+}
+
+/*------------------------------------------------------------------------**
+** 変数の定義                                                              **
+**------------------------------------------------------------------------*/
+$main-bg-color: rgb(76, 34, 36, 1);
+$main-text-color: rgb(207, 177, 91, 1);
+$consept-text-color: #C7B5B5;
+
+/*------------------------------------------------------------------------**
+** All                                                                    **
+**------------------------------------------------------------------------*/
+
+body{
+    background-color: white;
+}
+
+#div-nav .navbar{
+    background-color: $main-bg-color;
+
+    .nav-link{
+        font-size: 1.5rem;
+        color: $main-text-color;
+    }
+
+    .dropdown-menu{
+        border: none;
+        background-color: $main-bg-color;
+    }
+
+    .dropdown-item{
+        color:$main-text-color;
+    }
+
+    .dropdown-item:hover{
+        background-color:#593924;
+    }
+
+    .navbar-toggler{
+        border-color: $main-text-color;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    .navbar-toggler-icon{
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(207, 177, 91, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        background-color: transparent !important;
+    }
+
+    .navbar-toggler-icon :active{
+        background-color: transparent !important;
+    }
+}
+
+#div-banner{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.page_title{
+    margin: 0 auto;
+    color: $consept-text-color;
+    font-size: 5rem;
+}
+
+.footer{
+
+    background-color: $main-bg-color;
+    color: $main-text-color;
+
+
+    @include mq-up(md){
+        color: $consept-text-color;
+        background-image: url('/img/morita/bg-footer.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+/*------------------------------------------------------------------------**
+** Home                                                                   **
+**------------------------------------------------------------------------*/
+
+#divHomeConsept{
+    height: 25vh;
+    color: $consept-text-color;
+    background-image: url('/img/morita/home-bg-consept.png');
+    background-size: cover;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+
+    @include mq-up(md){
+        height: 30vh;
+    }
+}
+
+.p-home-consept{
+    width: 100%;
+    font-size: 1rem;
+
+    @include mq-up(md){
+        font-size: 1.3rem;
+        padding-left: 10vh;
+    }
+}
+
+.a-home-consept{
+    height: 5vh;
+    width: 100%;
+    color: white;
+	border: 1px solid $consept-text-color;
+
+    @include mq-up(md){
+        width: 20%;
+        font-size: 1.3rem;
+        margin-left: 10vh;
+    }
+}
+
+.a-home-consept:hover{
+    color:  $consept-text-color;
+}
+
+.home-title{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.home-news-card{
+    background-image: url('/img/morita/bg-info-card.gif');
+    border: none;
+    background-size: cover;
+
+    @include mq-up(md){
+        width: 80%;
+    }
+}
+
+.home-news-card .card-content{
+
+    height: 18vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    @include mq-up(md){
+        height: 13vh;
+        -webkit-line-clamp: 4;
+    }
+}
+
+.card-img-news{
+    width: 45vw;
+    height: 45vw;
+
+    object-fit: cover;
+
+    @include mq-up(md){
+        width: 13vw;
+        height: 13vw;
+    }
+}
+
+.card-news-date{
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.btn-card-news-detail{
+	border: 1px solid black;
+}
+
+/*------------------------------------------------------------------------**
+** Home                                                                   **
+**------------------------------------------------------------------------*/
+
+.shop_detail{
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+

@@ -18,6 +18,7 @@
             return $newsnewstags;
         }
 
+
         public function createNewsNewstag($news_id, $newstag_id){
             $newNewsNewstag = new NewsNewstag;
             $newNewsNewstag->news_id = $news_id;

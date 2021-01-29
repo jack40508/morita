@@ -24,8 +24,15 @@
             return $news;
         }
 
-        public function getNewestNews(){
-            $news = $this->news->orderBy('updated_at', 'DESC')->first();
+        public function getFirstNewsimage($news_id){
+
+            $newsimage = $this->newsimage->where('news_id', $news_id)->orderBy('id')->first();
+
+            return $newsimage;
+        }
+
+        public function getFrontNewestNewsOfOpen($num){
+            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->orderBy('updated_at', 'DESC')->limit($num)->get();
 
             return $news;
         }
