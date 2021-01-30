@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("var general = new Array();\nvar reserve = new Array();\nvar limit = new Ar
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!****************************************************!*\
   !*** multi ./resources/js/backside/page-change.js ***!
   \****************************************************/

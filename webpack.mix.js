@@ -12,6 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js("resources/js/morita/consept.js", 'public/js/')
     .js("resources/js/backside/sidebar.js", 'public/js/backside/')
     .js("resources/js/backside/product-create-edit.js", 'public/js/backside/')
     .js("resources/js/backside/product-search.js", 'public/js/backside/')

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -130,7 +130,7 @@ eval("var _require = __webpack_require__(/*! lodash */ \"./node_modules/lodash/l
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************************************************!*\
   !*** multi ./resources/js/backside/news-create-edit.js ***!
   \*********************************************************/

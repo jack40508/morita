@@ -37,7 +37,13 @@ $breakpoint-down: (
 **------------------------------------------------------------------------*/
 $main-bg-color: rgb(76, 34, 36, 1);
 $main-text-color: rgb(207, 177, 91, 1);
-$consept-text-color: #C7B5B5;
+$home-consept-text-color: #C7B5B5;
+$page-p-color: #888;
+
+//class of font color
+.text-color-fontgray{
+    color: $page-p-color;
+}
 
 /*------------------------------------------------------------------------**
 ** All                                                                    **
@@ -95,7 +101,7 @@ body{
 
 .page_title{
     margin: 0 auto;
-    color: $consept-text-color;
+    color: $home-consept-text-color;
     font-size: 5rem;
 }
 
@@ -106,7 +112,7 @@ body{
 
 
     @include mq-up(md){
-        color: $consept-text-color;
+        color: $home-consept-text-color;
         background-image: url('/img/morita/bg-footer.jpg');
         background-repeat: no-repeat;
         background-position: center;
@@ -120,7 +126,7 @@ body{
 
 #divHomeConsept{
     height: 25vh;
-    color: $consept-text-color;
+    color: $home-consept-text-color;
     background-image: url('/img/morita/home-bg-consept.png');
     background-size: cover;
     display: flex;
@@ -148,7 +154,7 @@ body{
     height: 5vh;
     width: 100%;
     color: white;
-	border: 1px solid $consept-text-color;
+	border: 1px solid $home-consept-text-color;
 
     @include mq-up(md){
         width: 20%;
@@ -158,7 +164,7 @@ body{
 }
 
 .a-home-consept:hover{
-    color:  $consept-text-color;
+    color:  $home-consept-text-color;
 }
 
 .home-title{
@@ -215,7 +221,7 @@ body{
 }
 
 /*------------------------------------------------------------------------**
-** Home                                                                   **
+** Access                                                                   **
 **------------------------------------------------------------------------*/
 
 .shop_detail{
@@ -223,3 +229,31 @@ body{
     margin-top: 5vh;
 }
 
+/*------------------------------------------------------------------------**
+** Consept                                                                **
+**------------------------------------------------------------------------*/
+
+#imgConsept1{
+    @include mq-up(md){
+        margin-top: 10vh;
+        max-width: 50vh;
+    }
+
+    @include mq-down(md){
+        max-width: 100%;
+    }
+}
+
+#consept-text-2{
+    @include mq-up(md){
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.test{
+    @include mq-up(md){
+        flex-direction: column-reverse;
+    }
+}
