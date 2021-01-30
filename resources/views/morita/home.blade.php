@@ -32,7 +32,7 @@
                                             <img class="card-img-news" src="/img/news/news_{{ $inews->id }}_{{ $inews->image->id }}.jpg" alt="Card image cap">
                                         </div>
                                         <div class="col-4 col-md-2 card-news-date">
-
+                                            <p class="pt-1">{{date('Y-m-d',strtotime($inews->upload_at))}} {{ $week[date('w',strtotime($inews->upload_at))] }}</p>
                                         </div>
                                     </div>
                                 @else

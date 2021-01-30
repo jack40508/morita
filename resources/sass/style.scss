@@ -221,7 +221,52 @@ body{
 }
 
 /*------------------------------------------------------------------------**
-** Access                                                                   **
+** Product                                                                **
+**------------------------------------------------------------------------*/
+
+.menu-list{
+    margin-bottom: 15vh;
+}
+
+.card-product{
+    background-image: url('/img/morita/bg-info-card.gif');
+    border: none;
+    background-size: cover;
+
+    @include mq-up(md){
+        width: 80%;
+    }
+}
+
+.card-img-product{
+    width: 70vw;
+    height: 70vw;
+
+    object-fit: cover;
+
+    @include mq-up(md){
+        width: 13vw;
+        height: 13vw;
+    }
+}
+
+.btn-card-product-detail{
+    //border: 3px solid $main-bg-color;
+    border: 1px solid;
+    width: 70%;
+}
+
+.modal-product-detail .modal-header{
+    background-color: $main-bg-color;
+    color: $main-text-color;
+}
+
+.modal-product-detail span{
+    color: $main-text-color;
+}
+
+/*------------------------------------------------------------------------**
+** Access                                                                 **
 **------------------------------------------------------------------------*/
 
 .shop_detail{
@@ -249,11 +294,5 @@ body{
         position: absolute;
         right: 0;
         bottom: 0;
-    }
-}
-
-.test{
-    @include mq-up(md){
-        flex-direction: column-reverse;
     }
 }

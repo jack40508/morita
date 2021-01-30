@@ -25,7 +25,7 @@
         </div>
         <div class="col-md-8">
             <div class="row">
-                <div class="col-12 test" id="conseptDivText2">
+                <div class="col-12 flex-md-column-reverse" id="conseptDivText2">
                     <div id="consept-text-2">
                         <p class="consept-p">
                             私たちモリタのビジョン（理想）は、<br>

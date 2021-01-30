@@ -16,8 +16,7 @@ Auth::routes();
 
 Route::get('/', 'MoritaController@home');
 Route::get('/home', 'MoritaController@home')->name('home');
-Route::get('/menu', 'MoritaController@menu')->name('menu');
-Route::get('/menu/{menu_id}', 'MoritaController@menu_show');
+Route::get('/menu/{menu_id}', 'MoritaController@menu');
 Route::get('/news', 'MoritaController@news')->name('news');
 Route::get('/news/{news_id}', 'MoritaController@news_show');
 Route::get('/consept', 'MoritaController@consept')->name('consept');

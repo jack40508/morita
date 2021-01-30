@@ -144,6 +144,12 @@
             return $products->get();
         }
 
+        public function getAllProductsOnsellOrderByDesc($column_name){
+            $products = $this->product->where('selldate', '<=', date('Y-m-d'))->where('soldoutdate', '>=', date('Y-m-d'))->where('is_sell', true)->orderBy($column_name, 'DESC')->get();
+
+            return $products;
+        }
+
         public function createNewProduct($product){
             $newProduct = new Product;
 
@@ -189,11 +195,13 @@
             if($request->limit){
                 $product->selldate = $request->date_start;
                 $product->soldoutdate = $request->date_end;
+                $product->is_sell = true;
             }else{
                 if(is_null($request->date_start)){
                     $product->selldate = date('Y-m-d');
                 }else{
                     $product->selldate = $request->date_start;
+                    $product->is_sell = true;
                 }
                 $product->soldoutdate = '2119-12-31';
             }
@@ -243,6 +251,7 @@
         public function updateProductSelldate($start, $end, $product){
             $product->selldate = $start;
             $product->soldoutdate = $end;
+            $product->is_sell = true;
 
             $product->save();
         }

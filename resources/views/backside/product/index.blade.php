@@ -44,6 +44,10 @@
                                 @elseif($product->selldate > date('Y-m-d'))
                                     <h4><span class="badge badge-pill badge-warning mr-1" data-toggle="tooltip" data-placement="top" title="{{ $product->selldate }}~{{ $product->soldoutdate }}">開催日待ち</span></h4>
                                 @endif
+                            @else
+                                @if($product->selldate > date('Y-m-d'))
+                                    <h4><span class="badge badge-pill badge-warning mr-1" data-toggle="tooltip" data-placement="top" title="{{ $product->selldate }}~{{ $product->soldoutdate }}">開催日待ち</span></h4>
+                                @endif
                             @endif
                         @else
                             <h4><span class="badge badge-pill badge-secondary mr-1">販売中止</span></h4>
