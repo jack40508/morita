@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/backside/sidebar.js":
-/*!******************************************!*\
-  !*** ./resources/js/backside/sidebar.js ***!
-  \******************************************/
+/***/ "./resources/js/morita/news.js":
+/*!*************************************!*\
+  !*** ./resources/js/morita/news.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var location = window.location.href.toString();\n\nif (location.search(\"news\") != -1) {\n  document.getElementById('collapseNews').classList.add(\"show\");\n} else if (location.search(\"product\") != -1) {\n  document.getElementById('collapseProduct').classList.add(\"show\");\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvYmFja3NpZGUvc2lkZWJhci5qcz9hMTI1Il0sIm5hbWVzIjpbImxvY2F0aW9uIiwid2luZG93IiwiaHJlZiIsInRvU3RyaW5nIiwic2VhcmNoIiwiZG9jdW1lbnQiLCJnZXRFbGVtZW50QnlJZCIsImNsYXNzTGlzdCIsImFkZCJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsUUFBUSxHQUFHQyxNQUFNLENBQUNELFFBQVAsQ0FBZ0JFLElBQWhCLENBQXFCQyxRQUFyQixFQUFmOztBQUVBLElBQUdILFFBQVEsQ0FBQ0ksTUFBVCxDQUFnQixNQUFoQixLQUEyQixDQUFDLENBQS9CLEVBQWlDO0FBQzdCQyxVQUFRLENBQUNDLGNBQVQsQ0FBd0IsY0FBeEIsRUFBd0NDLFNBQXhDLENBQWtEQyxHQUFsRCxDQUFzRCxNQUF0RDtBQUNILENBRkQsTUFFTSxJQUFHUixRQUFRLENBQUNJLE1BQVQsQ0FBZ0IsU0FBaEIsS0FBOEIsQ0FBQyxDQUFsQyxFQUFvQztBQUN0Q0MsVUFBUSxDQUFDQyxjQUFULENBQXdCLGlCQUF4QixFQUEyQ0MsU0FBM0MsQ0FBcURDLEdBQXJELENBQXlELE1BQXpEO0FBQ0giLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvYmFja3NpZGUvc2lkZWJhci5qcy5qcyIsInNvdXJjZXNDb250ZW50IjpbInZhciBsb2NhdGlvbiA9IHdpbmRvdy5sb2NhdGlvbi5ocmVmLnRvU3RyaW5nKCk7XHJcblxyXG5pZihsb2NhdGlvbi5zZWFyY2goXCJuZXdzXCIpICE9IC0xKXtcclxuICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdjb2xsYXBzZU5ld3MnKS5jbGFzc0xpc3QuYWRkKFwic2hvd1wiKTtcclxufWVsc2UgaWYobG9jYXRpb24uc2VhcmNoKFwicHJvZHVjdFwiKSAhPSAtMSl7XHJcbiAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY29sbGFwc2VQcm9kdWN0JykuY2xhc3NMaXN0LmFkZChcInNob3dcIik7XHJcbn0iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./resources/js/backside/sidebar.js\n");
+eval("Array.from(document.getElementsByClassName('a-news-page')).forEach(function (linkNewsPage) {\n  linkNewsPage.onclick = function () {\n    var page_id = parseInt(this.id.replace(/[^0-9]/ig, \"\")); //console.log(page_id);\n\n    $.ajax({\n      type: \"get\",\n      url: \"/news/page/\" + page_id,\n      data: \"\",\n      cache: false,\n      success: function success(data) {\n        $('#news-area').html(data);\n      }\n    });\n  };\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9yZXNvdXJjZXMvanMvbW9yaXRhL25ld3MuanM/YzQzZSJdLCJuYW1lcyI6WyJBcnJheSIsImZyb20iLCJkb2N1bWVudCIsImdldEVsZW1lbnRzQnlDbGFzc05hbWUiLCJmb3JFYWNoIiwibGlua05ld3NQYWdlIiwib25jbGljayIsInBhZ2VfaWQiLCJwYXJzZUludCIsImlkIiwicmVwbGFjZSIsIiQiLCJhamF4IiwidHlwZSIsInVybCIsImRhdGEiLCJjYWNoZSIsInN1Y2Nlc3MiLCJodG1sIl0sIm1hcHBpbmdzIjoiQUFBQUEsS0FBSyxDQUFDQyxJQUFOLENBQVdDLFFBQVEsQ0FBQ0Msc0JBQVQsQ0FBZ0MsYUFBaEMsQ0FBWCxFQUEyREMsT0FBM0QsQ0FBbUUsVUFBU0MsWUFBVCxFQUF1QjtBQUV0RkEsY0FBWSxDQUFDQyxPQUFiLEdBQXVCLFlBQVc7QUFDOUIsUUFBSUMsT0FBTyxHQUFHQyxRQUFRLENBQUMsS0FBS0MsRUFBTCxDQUFRQyxPQUFSLENBQWdCLFVBQWhCLEVBQTJCLEVBQTNCLENBQUQsQ0FBdEIsQ0FEOEIsQ0FFOUI7O0FBRUFDLEtBQUMsQ0FBQ0MsSUFBRixDQUFPO0FBQ0hDLFVBQUksRUFBRSxLQURIO0FBRUhDLFNBQUcsRUFBRSxnQkFBZ0JQLE9BRmxCO0FBR0hRLFVBQUksRUFBRSxFQUhIO0FBSUhDLFdBQUssRUFBRSxLQUpKO0FBS0hDLGFBQU8sRUFBRSxpQkFBU0YsSUFBVCxFQUFjO0FBQ3JCSixTQUFDLENBQUMsWUFBRCxDQUFELENBQWdCTyxJQUFoQixDQUFxQkgsSUFBckI7QUFDRDtBQVBFLEtBQVA7QUFTSCxHQWJEO0FBZUgsQ0FqQkQiLCJmaWxlIjoiLi9yZXNvdXJjZXMvanMvbW9yaXRhL25ld3MuanMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJBcnJheS5mcm9tKGRvY3VtZW50LmdldEVsZW1lbnRzQnlDbGFzc05hbWUoJ2EtbmV3cy1wYWdlJykpLmZvckVhY2goZnVuY3Rpb24obGlua05ld3NQYWdlKSB7XHJcblxyXG4gICAgbGlua05ld3NQYWdlLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcclxuICAgICAgICB2YXIgcGFnZV9pZCA9IHBhcnNlSW50KHRoaXMuaWQucmVwbGFjZSgvW14wLTldL2lnLFwiXCIpKTtcclxuICAgICAgICAvL2NvbnNvbGUubG9nKHBhZ2VfaWQpO1xyXG5cclxuICAgICAgICAkLmFqYXgoe1xyXG4gICAgICAgICAgICB0eXBlOiBcImdldFwiLFxyXG4gICAgICAgICAgICB1cmw6IFwiL25ld3MvcGFnZS9cIiArIHBhZ2VfaWQsXHJcbiAgICAgICAgICAgIGRhdGE6IFwiXCIsXHJcbiAgICAgICAgICAgIGNhY2hlOiBmYWxzZSxcclxuICAgICAgICAgICAgc3VjY2VzczogZnVuY3Rpb24oZGF0YSl7XHJcbiAgICAgICAgICAgICAgJCgnI25ld3MtYXJlYScpLmh0bWwoZGF0YSk7XHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICB9KTtcclxuICAgIH1cclxuXHJcbn0pO1xyXG5cclxuIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./resources/js/morita/news.js\n");
 
 /***/ }),
 
-/***/ 5:
-/*!************************************************!*\
-  !*** multi ./resources/js/backside/sidebar.js ***!
-  \************************************************/
+/***/ 2:
+/*!*******************************************!*\
+  !*** multi ./resources/js/morita/news.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\morita\resources\js\backside\sidebar.js */"./resources/js/backside/sidebar.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\morita\resources\js\morita\news.js */"./resources/js/morita/news.js");
 
 
 /***/ })

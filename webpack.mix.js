@@ -13,6 +13,9 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js("resources/js/morita/consept.js", 'public/js/')
+    .js("resources/js/morita/news.js", 'public/js/')
+    .js("resources/js/morita/calendar.js", 'public/js/')
+    .js("resources/js/morita/jquery.lighter.js", 'public/js/')
     .js("resources/js/backside/sidebar.js", 'public/js/backside/')
     .js("resources/js/backside/product-create-edit.js", 'public/js/backside/')
     .js("resources/js/backside/product-search.js", 'public/js/backside/')
@@ -21,6 +24,8 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/bs_style.scss', 'public/css')
     .sass('resources/sass/style.scss', 'public/css')
-    .postCss('resources/css/bs_sidebar.css', 'public/css');
+    .postCss('resources/css/bs_sidebar.css', 'public/css')
+    .postCss('resources/css/calendar.css', 'public/css')
+    .postCss('resources/css/jquery.lighter.css', 'public/css');
 
 mix.sourceMaps().js('node_modules/popper.js/dist/popper.js', 'public/js').sourceMaps();

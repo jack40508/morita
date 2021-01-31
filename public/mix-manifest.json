@@ -4,11 +4,16 @@
     "/css/bs_style.css": "/css/bs_style.css",
     "/css/style.css": "/css/style.css",
     "/css/bs_sidebar.css": "/css/bs_sidebar.css",
+    "/css/calendar.css": "/css/calendar.css",
+    "/css/jquery.lighter.css": "/css/jquery.lighter.css",
     "/js/backside/news-create-edit.js": "/js/backside/news-create-edit.js",
     "/js/backside/page-change.js": "/js/backside/page-change.js",
     "/js/backside/product-create-edit.js": "/js/backside/product-create-edit.js",
     "/js/backside/product-search.js": "/js/backside/product-search.js",
     "/js/backside/sidebar.js": "/js/backside/sidebar.js",
+    "/js/calendar.js": "/js/calendar.js",
     "/js/consept.js": "/js/consept.js",
+    "/js/jquery.lighter.js": "/js/jquery.lighter.js",
+    "/js/news.js": "/js/news.js",
     "/js/popper.js": "/js/popper.js"
 }

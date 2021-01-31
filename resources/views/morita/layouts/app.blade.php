@@ -19,6 +19,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/calendar.css" rel="stylesheet">
+
+    <!-- Import jquery lighter -->
+    <script src="/js/jquery.lighter.js" type="text/javascript"></script>
+    <link href="/css/jquery.lighter.css" rel="stylesheet" type="text/css"/>
+
 </head>
 <body>
     <div id="wrapper">

@@ -92,7 +92,7 @@
                                     <p>紹介</p>
                                 </div>
                                 <div class="col-md-8">
-                                    {{ $shop->about }}
+                                    {!! $shop->about !!}
                                 </div>
                             </div>
                         </li>

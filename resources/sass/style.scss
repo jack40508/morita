@@ -266,6 +266,78 @@ body{
 }
 
 /*------------------------------------------------------------------------**
+** News                                                                   **
+**------------------------------------------------------------------------*/
+
+.news-ul-news{
+    margin-bottom: 5vh;
+}
+
+.a-news-link:hover{
+    text-decoration: none;
+    color: $page-p-color;
+}
+
+.list-img-news{
+    width: 80vw;
+    height: 80vw;
+    object-fit: cover;
+
+    @include mq-up(md){
+        width: 15vw;
+        height: 15vw;
+    }
+}
+
+.news-list-img-detail{
+    width: 20vw;
+    margin-top: 10vh;
+
+    @include mq-up(md){
+        width: 5vw;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.a-news-page{
+    color: $main-bg-color;
+    border: none;
+    font-size: 2rem;
+}
+
+.a-news-page:hover{
+    color: #593924;
+}
+
+.news-kategorie-title{
+    width: 100%;
+    color: white;
+    background-color: $main-bg-color;
+    padding: 10px;
+    text-align: center;
+}
+
+.news-kategorie-tag{
+    width: 100%;
+    color: white;
+    background-color: $main-bg-color;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.img-news{
+    max-width: 100%;
+    object-fit: cover;
+
+    @include mq-up(md){
+        height: 30vh;
+    }
+}
+
+/*------------------------------------------------------------------------**
 ** Access                                                                 **
 **------------------------------------------------------------------------*/
 

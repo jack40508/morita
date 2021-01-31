@@ -32,7 +32,19 @@
         }
 
         public function getFrontNewestNewsOfOpen($num){
-            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->orderBy('updated_at', 'DESC')->limit($num)->get();
+            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->limit($num)->get();
+
+            return $news;
+        }
+
+        public function getAllOpenNews(){
+            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->get();
+
+            return $news;
+        }
+
+        public function getNewsById($id){
+            $news = $this->news->where('id', $id)->first();
 
             return $news;
         }

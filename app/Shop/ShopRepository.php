@@ -42,7 +42,7 @@
             $newshop->opentime = $request->opentime;
             $newshop->closetime = $request->closetime;
             $newshop->shoptype_id = $request->shoptype;
-            $newshop->about = $request->about;
+            $newshop->about = str_replace("\r\n",'<br/>', $request->about);
 
             $newshop->save();
 
@@ -67,7 +67,7 @@
             $shop->opentime = $request->opentime;
             $shop->closetime = $request->closetime;
             $shop->shoptype_id = $request->shoptype;
-            $shop->about = $request->about;
+            $shop->about = str_replace("\r\n",'<br/>', $request->about);
             $shop->save();
 
             $this->shopdayoff->where('shop_id', $shop->id)->delete();

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("var btnAddSizeprice = document.getElementById('btn-add-sizeprice');\nvar l
 
 /***/ }),
 
-/***/ 3:
+/***/ 6:
 /*!************************************************************!*\
   !*** multi ./resources/js/backside/product-create-edit.js ***!
   \************************************************************/
