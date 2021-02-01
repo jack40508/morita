@@ -36,7 +36,7 @@
                 <a class="nav-link" href="/news" id="nav_link_profile">News</a>
             </li>
             <li class="nav-item active ml-5">
-                <a class="nav-link" href="/consept" id="nav_link_profile">Consept</a>
+                <a class="nav-link" href="/consept" id="nav_link_profile">Concept</a>
             </li>
             <li class="nav-item active ml-5">
                 <a class="nav-link" href="/access" id="nav_link_profile">Access</a>

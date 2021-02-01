@@ -25,6 +25,12 @@
             return $newskategories;
         }
 
+        public function getKategorieById($id){
+            $newskategorie = $this->newskategorie->where('id', $id)->first();
+
+            return $newskategorie;
+        }
+
         public function updateNewskategorie(Newskategorie $newskategorie,Request $request){
 
             $newskategorie->name = $request->name;

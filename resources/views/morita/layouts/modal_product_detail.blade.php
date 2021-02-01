@@ -18,7 +18,7 @@
                             <h4>￥{{ $product->productsizes[0]->price }}</h4>
                         @else
                             @foreach($product->productsizes as $product->productsize)
-                                <h4>{{ $product->productsize->size }} ￥{{ $product->productsizes[0]->price }}</h4>
+                                <h4>{{ $product->productsize->size }} ￥{{ $product->productsize->price }}</h4>
                             @endforeach
                         @endif
                     </div>

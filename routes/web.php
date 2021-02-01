@@ -19,6 +19,8 @@ Route::get('/home', 'MoritaController@home')->name('home');
 Route::get('/menu/{menu_id}', 'MoritaController@menu');
 Route::get('/news', 'MoritaController@news')->name('news');
 Route::get('/news/page/{page_id}', 'MoritaController@news_page');
+Route::get('/news/page/{searh}/{page_id}', 'MoritaController@news_search_page');
+Route::get('/news/{searh}/{key}', 'MoritaController@news_search');
 Route::get('/news/{news_id}', 'MoritaController@news_show');
 Route::get('/consept', 'MoritaController@consept')->name('consept');
 Route::get('/access', 'MoritaController@access')->name('access');

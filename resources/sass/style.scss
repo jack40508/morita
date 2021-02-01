@@ -360,11 +360,3 @@ body{
         max-width: 100%;
     }
 }
-
-#consept-text-2{
-    @include mq-up(md){
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
-}

@@ -113,6 +113,43 @@ class MoritaController extends Controller
         return view('morita.news.show', compact('page', 'productkategories', 'headshop', 'news', 'newskategories'));
     }
 
+    public function news_search($search, $key)
+    {
+        //for all page
+        $page = $this->page->getPageById('3');
+        $page->banner = $this->page->getNowBannerimage($page);
+        $productkategories = $this->productkategorie->getAllProductkategories();
+        $headshop = $this->shop->getFirstShopByColumnName('shoptype_id', '1');
+        
+        //search
+        switch($search){
+            case 'category':
+                $news = $this->newskategorie->getKategorieById($key)->open_news;
+                break;
+            
+            case 'tag':
+                $news = $this->newstag->getTagById($key)->open_news;
+                break;
+
+            case 'date':
+                $news = $this->news->getOpenNewsByUploadAt(str_replace("-", "/", $key));
+                break;
+            default:
+                return redirect('news/');
+                break;
+        }
+
+        //news
+        $newskategories = $this->newskategorie->getAllNewskategories();
+        foreach($news as $inews){
+            $inews->image = $inews->newsimages->first();
+        }
+
+        return view('morita.news.index', compact('page', 'productkategories', 'headshop', 'news', 'newskategories'));
+
+            
+    }
+
     public function consept()
     {
         //for all page

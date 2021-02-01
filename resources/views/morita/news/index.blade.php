@@ -72,7 +72,7 @@
             <h3 class="news-kategorie-title">Category</h3>
             <ul class="list-group list-group-flush">
                 @foreach($newskategories as $newskategorie)
-                <li class="list-group-item text-right"><h4>{{ $newskategorie->name }} ({{count($newskategorie->open_news)}})</h4></li>
+                <li class="list-group-item text-right"><h4><a href="/news/category/{{ $newskategorie->id }}">{{ $newskategorie->name }} ({{count($newskategorie->open_news)}})</a></h4></li>
                 @endforeach
             </ul>
         </div>

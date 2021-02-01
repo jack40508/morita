@@ -49,6 +49,20 @@
             return $news;
         }
 
+        public function getNewsByColumnName($column_name, $data){
+
+            $news = $this->news->where($column_name, $data)->get();
+
+            return $news;
+        }
+
+        public function getOpenNewsByUploadAt($date){
+
+            $news = $this->news->where('upload_at', '<=', $date." 23:59:59")->where('upload_at', '>=', $date." 00:00:00")->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->get();
+
+            return $news;
+        }
+
         public function createNewNews($request){
             $newNews = new News;
 
