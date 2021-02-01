@@ -12,7 +12,7 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .js("resources/js/morita/consept.js", 'public/js/')
+    .js("resources/js/morita/scoll.js", 'public/js/')
     .js("resources/js/morita/news.js", 'public/js/')
     .js("resources/js/morita/calendar.js", 'public/js/')
     .js("resources/js/morita/jquery.lighter.js", 'public/js/')

@@ -12,8 +12,8 @@
     "/js/backside/product-search.js": "/js/backside/product-search.js",
     "/js/backside/sidebar.js": "/js/backside/sidebar.js",
     "/js/calendar.js": "/js/calendar.js",
-    "/js/consept.js": "/js/consept.js",
     "/js/jquery.lighter.js": "/js/jquery.lighter.js",
     "/js/news.js": "/js/news.js",
-    "/js/popper.js": "/js/popper.js"
+    "/js/popper.js": "/js/popper.js",
+    "/js/scoll.js": "/js/scoll.js"
 }

@@ -27,6 +27,12 @@
             return $newstags;
         }
 
+        public function getNewstagById($id){
+            $newsnewstag = $this->newstag->where('id', $id)->first();
+
+            return $newsnewstag;
+        }
+
         public function createNewNewstag($request){
 
             $newNewstag = new Newstag;

@@ -3,7 +3,7 @@
 @section('content')
 
     @foreach($shops as $shop)
-        <div class="row justify-content-center shop_detail text-color-fontgray">
+        <div class="row justify-content-center shop_detail text-color-fontgray animate_fade-in">
             <div class="col-md-4">
                 <h3>■{{ $shop->name }}</h3>
                 <p class="pl-1">{{ $shop->address }}</p>
@@ -26,7 +26,6 @@
                 </iframe>
             </div>
         </div>
-
-        @endforeach
+    @endforeach
 
 @endsection

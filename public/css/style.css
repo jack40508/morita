@@ -68,8 +68,6 @@ body {
 
 .page_title {
   margin: 0 auto;
-  color: #C7B5B5;
-  font-size: 5rem;
 }
 
 .footer {
@@ -259,7 +257,12 @@ body {
   color: #888;
 }
 
-.list-img-news {
+.card-news-main {
+  border: none;
+  border-bottom: solid 1px #888;
+}
+
+.card-img-news-main {
   width: 80vw;
   height: 80vw;
   -o-object-fit: cover;
@@ -267,19 +270,23 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .list-img-news {
+  .card-img-news-main {
     width: 15vw;
     height: 15vw;
   }
 }
 
-.news-list-img-detail {
+.news-list-news {
+  white-space: pre-line;
+}
+
+.news-card-img-detail {
   width: 20vw;
   margin-top: 10vh;
 }
 
 @media screen and (min-width: 768px) {
-  .news-list-img-detail {
+  .news-card-img-detail {
     width: 5vw;
     position: absolute;
     right: 0;
@@ -325,6 +332,10 @@ body {
   }
 }
 
+.img-back-news {
+  margin-top: 20vh;
+}
+
 /*------------------------------------------------------------------------**
 ** Access                                                                 **
 **------------------------------------------------------------------------*/
@@ -348,6 +359,34 @@ body {
 @media screen and (max-width: 767px) {
   #imgConsept1 {
     max-width: 100%;
+  }
+}
+
+/*------------------------------------------------------------------------**
+** Animate Fade in                                                        **
+**------------------------------------------------------------------------*/
+
+.animate_fade-in {
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 

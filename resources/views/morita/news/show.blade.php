@@ -12,7 +12,7 @@
             </p>
 
             @foreach($news->newstags as $newstag)
-                <a href="#">#{{ $newstag->name }}</a>
+                <a href="/news/tag/{{ $newstag->id }}">#{{ $newstag->name }}</a>
             @endforeach
 
             <div class="row mt-5">
@@ -25,14 +25,19 @@
                 @endforeach
             </div>
 
+            <div class="col-12 text-right img-back-news">
+                <a href="{{ URL::previous() }}"><img class="news-card-img-detail" src="/img/news/news_detail.png" alt="Card image page link"></a>
+            </div>
+
         </div>
         <div class="col-md-3 col-12 d-none d-md-block">
             @include('morita.news.layouts.calendar')
 
             <h3 class="news-kategorie-title">Category</h3>
             <ul class="list-group list-group-flush">
+                <li class="list-group-item text-right"><h4><a href="/news">全部 ({{ $cnt_all_news }})</a></h4></li>
                 @foreach($newskategories as $newskategorie)
-                <li class="list-group-item text-right"><h4>{{ $newskategorie->name }} ({{count($newskategorie->open_news)}})</h4></li>
+                <li class="list-group-item text-right"><h4><a href="/news/category/{{ $newskategorie->id }}">{{ $newskategorie->name }} ({{count($newskategorie->open_news)}})</a></h4></li>
                 @endforeach
             </ul>
         </div>

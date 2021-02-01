@@ -7,7 +7,7 @@
         @foreach($pages as $page)
         <div class="col-12 col-md-2 mb-3 mb-md-0">
             <div class="card text-center">
-                <h5 class="card-header">{{ $page->name }}</h5>
+                <h5 class="card-header">{{ ucfirst($page->name) }}</h5>
                 <img class="card-img-top img-banner-firstview mt-3" src="/img/banner/banner_{{ $page->now_bannerimage->id }}.jpg" alt="Page Banner Image">
                 <div class="card-body">
                     <a href="/backside/page/{{ $page->id }}" class="btn btn-info mt-1 w-100" role="button" aria-pressed="true">予定表</a>

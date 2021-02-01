@@ -1,20 +1,25 @@
 @extends('morita.layouts.app')
 
 @section('content')
-
+    @if(isset($search))
+        @if(!is_null($search))
+            <h2 class="mb-3 ml-3">{{ ucfirst($search) }} {{ $target->name }} 検索結果：</h2>
+        @endif
+    @endif
     <div class="row justify-content-around">
         <div class="col-12 col-md-8" id="news-area">
             <ul class="list-group list-group-flush news-ul-news">
                 @for($i=0; $i<3; $i++)
                     @if(isset($news[$i]))
-                        <li class="list-group-item news-list-news">
+                    <div class="card card-news-main">
+                        <div class="card-body">
                             <a class="a-news-link text-color-fontgray" href="/news/{{ $news[$i]->id }}">
                                 <div class="row">
                                     <div class="col-12 col-md-4 mb-3 mb-md-0">
                                         @if(!is_null($news[$i]->image))
-                                            <img class="list-img-news" src="/img/news/news_{{ $news[$i]->id }}_{{ $news[$i]->image->id }}.jpg" alt="List image cap">
+                                            <img class="card-img-news-main" src="/img/news/news_{{ $news[$i]->id }}_{{ $news[$i]->image->id }}.jpg" alt="List image cap">
                                         @else
-                                            <img class="list-img-news" src="/img/news/news_default.jpg" alt="List image cap">
+                                            <img class="card-img-news-main" src="/img/news/news_default.jpg" alt="List image cap">
                                         @endif
                                     </div>
                                     <div class="col-12 col-md-6">
@@ -23,11 +28,12 @@
                                         <h2>{{ $news[$i]->title }}</h2>
                                     </div>
                                     <div class="col-12 text-right">
-                                        <img class="news-list-img-detail" src="/img/news/news_detail.png" alt="Card image page link">
+                                        <img class="news-card-img-detail" src="/img/news/news_detail.png" alt="Card image page link">
                                     </div>
                                 </div>
                             </a>
-                        </li>
+                        </div>
+                    </div>
                     @endif
                 @endfor
             </ul>
@@ -62,7 +68,6 @@
                         </nav>
                     </div>
                 </div>
-
             @endif
         </div>
 
@@ -71,6 +76,7 @@
 
             <h3 class="news-kategorie-title">Category</h3>
             <ul class="list-group list-group-flush">
+                <li class="list-group-item text-right"><h4><a href="/news">全部 ({{ $cnt_all_news }})</a></h4></li>
                 @foreach($newskategories as $newskategorie)
                 <li class="list-group-item text-right"><h4><a href="/news/category/{{ $newskategorie->id }}">{{ $newskategorie->name }} ({{count($newskategorie->open_news)}})</a></h4></li>
                 @endforeach
@@ -78,5 +84,23 @@
         </div>
     </div>
 
+    @if(isset($search))
+        <script>
+            search = '{{ $search }}';
+        </script>
+    @else
+        <script>
+            search = null;
+        </script>
+    @endif
+    @if(isset($key))
+        <script>
+            key = '{{ $key }}';
+        </script>
+    @else
+        <script>
+            key = null;
+        </script>
+    @endif
     <script src="{{ asset('/js/news.js') }}"></script>
 @endsection

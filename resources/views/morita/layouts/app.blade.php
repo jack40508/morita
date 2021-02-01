@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>パティスリー</title>
+    <title>パティスリーモリタ</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -25,6 +25,12 @@
     <script src="/js/jquery.lighter.js" type="text/javascript"></script>
     <link href="/css/jquery.lighter.css" rel="stylesheet" type="text/css"/>
 
+    <!--Import ScollJS JS-->
+    <script src="/js/scoll.js"></script>
+
+    <!--Icon-->
+    <link rel="icon" href="/img/icon/icon.ico" type="image/x-icon" />
+
 </head>
 <body>
     <div id="wrapper">
@@ -32,8 +38,8 @@
             @include('morita.layouts.nav')
         </div>
         <div class="mb-5" id="div-banner" style="background-image: url('/img/banner/banner_{{ $page->banner->id }}.jpg');">
-            @if($page->name != 'Home')
-                <h1 class="page_title">{{ $page->name }}</h1>
+            @if($page->name != 'home')
+                <h1 class="page_title"><img src="/img/title/title_{{ $page->id }}.png" alt="title_{{ $page->name }}" style="width: 40vw;"></h1>
             @endif
         </div>
 

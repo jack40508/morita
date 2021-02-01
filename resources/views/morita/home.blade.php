@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="row justify-content-center">
-        <div class="col-10 mb-5" id="divHomeConsept">
+        <div class="col-10 mb-5 animate_fade-in" id="divHomeConsept">
             <p class="p-home-consept">
                 時代に合った美味しいもので幸せに<br>
                 上質だけど気取らない、身近な、楽しい時間をみなさまにお届けします
@@ -11,7 +11,7 @@
         </div>
     </div>
 
-    <div id="home-news">
+    <div id="home-news" class="animate_fade-in">
         <div class="row text-center">
             <div class="col-md-4 offset-md-4">
                 <h2 class="mb-3 home-title">News</h2>

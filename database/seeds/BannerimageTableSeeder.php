@@ -28,20 +28,5 @@ class BannerimageTableSeeder extends Seeder
         Bannerimage::create([
 
         ]);
-        Bannerimage::create([
-
-        ]);
-        Bannerimage::create([
-
-        ]);
-        Bannerimage::create([
-
-        ]);
-        Bannerimage::create([
-
-        ]);
-        Bannerimage::create([
-
-        ]);
     }
 }

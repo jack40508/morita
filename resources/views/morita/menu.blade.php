@@ -4,7 +4,7 @@
 
     <div class="row justify-content-center">
         @if(count($limitproducts) > 0)
-            <div class="col-md-10 menu-list">
+            <div class="col-md-10 menu-list animate_fade-in">
                 <div class="row">
                     <div class="col-md-8">
                         <h2>期間限定</h2>
@@ -41,7 +41,7 @@
     @if(!is_null($select_productkategories))
     <div class="row justify-content-center">
         @foreach($select_productkategories as $select_productkategorie)
-            <div class="col-md-10 menu-list">
+            <div class="col-md-10 menu-list animate_fade-in">
                 <div class="row">
                     <div class="col-md-8">
                         <h2>{{ $select_productkategorie->name }}</h2>

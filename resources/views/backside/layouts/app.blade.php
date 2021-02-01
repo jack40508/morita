@@ -20,6 +20,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="/css/bs_sidebar.css" rel="stylesheet">
     <link href="/css/bs_style.css" rel="stylesheet">
+
+    <!--Icon-->
+    <link rel="icon" href="/img/icon/bs_icon.ico" type="image/x-icon" />
 </head>
 <body>
     <div id="wrapper">

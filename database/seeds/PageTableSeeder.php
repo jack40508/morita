@@ -14,23 +14,23 @@ class PageTableSeeder extends Seeder
     {
         //
         Page::create([
-            'name' => 'Home',
+            'name' => 'home',
         ]);
 
         Page::create([
-            'name' => 'Menu',
+            'name' => 'menu',
         ]);
 
         Page::create([
-            'name' => 'News',
+            'name' => 'news',
         ]);
 
         Page::create([
-            'name' => 'Consept',
+            'name' => 'concept',
         ]);
 
         Page::create([
-            'name' => 'Access',
+            'name' => 'access',
         ]);
     }
 }

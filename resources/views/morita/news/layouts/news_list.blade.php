@@ -1,27 +1,29 @@
 <ul class="list-group list-group-flush news-ul-news">
     @for($i=($page_id-1)*3; $i<$page_id*3; $i++)
         @if(isset($news[$i]))
-            <li class="list-group-item news-list-news">
-                <a class="a-news-link text-color-fontgray" href="/news/{{ $news[$i]->id }}">
-                    <div class="row">
-                        <div class="col-12 col-md-4 mb-3 mb-md-0">
-                            @if(!is_null($news[$i]->image))
-                                <img class="list-img-news" src="/img/news/news_{{ $news[$i]->id }}_{{ $news[$i]->image->id }}.jpg" alt="List image cap">
-                            @else
-                                <img class="list-img-news" src="/img/news/news_default.jpg" alt="List image cap">
-                            @endif
+            <div class="card card-news-main">
+                <div class="card-body">
+                    <a class="a-news-link text-color-fontgray" href="/news/{{ $news[$i]->id }}">
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                @if(!is_null($news[$i]->image))
+                                    <img class="card-img-news-main" src="/img/news/news_{{ $news[$i]->id }}_{{ $news[$i]->image->id }}.jpg" alt="List image cap">
+                                @else
+                                    <img class="card-img-news-main" src="/img/news/news_default.jpg" alt="List image cap">
+                                @endif
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <h4 class="mb-3">{{ date('Y-m-d',strtotime($news[$i]->upload_at ))}}</h4>
+                                <h4 class="mb-3">{{ $news[$i]->newskategorie->name }}</h4>
+                                <h2>{{ $news[$i]->title }}</h2>
+                            </div>
+                            <div class="col-12 text-right">
+                                <img class="news-card-img-detail" src="/img/news/news_detail.png" alt="Card image page link">
+                            </div>
                         </div>
-                        <div class="col-12 col-md-6">
-                            <h4 class="mb-3">{{ date('Y-m-d',strtotime($news[$i]->upload_at ))}}</h4>
-                            <h4 class="mb-3">{{ $news[$i]->newskategorie->name }}</h4>
-                            <h2>{{ $news[$i]->title }}</h2>
-                        </div>
-                        <div class="col-12 text-right">
-                            <img class="news-list-img-detail" src="/img/news/news_detail.png" alt="Card image page link">
-                        </div>
-                    </div>
-                </a>
-            </li>
+                    </a>
+                </div>
+            </div>
         @endif
     @endfor
 </ul>

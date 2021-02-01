@@ -101,8 +101,6 @@ body{
 
 .page_title{
     margin: 0 auto;
-    color: $home-consept-text-color;
-    font-size: 5rem;
 }
 
 .footer{
@@ -278,7 +276,12 @@ body{
     color: $page-p-color;
 }
 
-.list-img-news{
+.card-news-main{
+    border: none;
+    border-bottom: solid 1px $page-p-color;
+}
+
+.card-img-news-main{
     width: 80vw;
     height: 80vw;
     object-fit: cover;
@@ -289,7 +292,11 @@ body{
     }
 }
 
-.news-list-img-detail{
+.news-list-news{
+    white-space: pre-line;
+}
+
+.news-card-img-detail{
     width: 20vw;
     margin-top: 10vh;
 
@@ -337,6 +344,10 @@ body{
     }
 }
 
+.img-back-news{
+    margin-top: 20vh;
+}
+
 /*------------------------------------------------------------------------**
 ** Access                                                                 **
 **------------------------------------------------------------------------*/
@@ -358,5 +369,20 @@ body{
 
     @include mq-down(md){
         max-width: 100%;
+    }
+}
+
+/*------------------------------------------------------------------------**
+** Animate Fade in                                                        **
+**------------------------------------------------------------------------*/
+.animate_fade-in{
+    opacity: 0;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
