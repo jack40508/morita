@@ -70,6 +70,16 @@ body {
   margin: 0 auto;
 }
 
+.page_title img {
+  width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+  .page_title img {
+    width: 40vw;
+  }
+}
+
 .footer {
   background-color: #4c2224;
   color: #cfb15b;
@@ -334,6 +344,10 @@ body {
 
 .img-back-news {
   margin-top: 20vh;
+}
+
+.new-kategorie {
+  border: solid 1px;
 }
 
 /*------------------------------------------------------------------------**

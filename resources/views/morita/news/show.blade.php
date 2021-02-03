@@ -6,7 +6,11 @@
         <div class="col-md-8 col-12">
             <h2>{{ $news->title }}</h2>
             <hr>
-            <h4 class="text-right">{{ $news->newskategorie->name }}</h4>
+            <div class="row">
+                <div class="col-2 offset-md-10">
+                    <h4 class="text-center new-kategorie pt-1 pb-1">{{ $news->newskategorie->name }}</h4>
+                </div>
+            </div>
             <p>
                 {!! $news->content !!}
             </p>

@@ -101,6 +101,15 @@ body{
 
 .page_title{
     margin: 0 auto;
+    
+    img{
+        width: 100vw;
+    
+        @include mq-up(md){
+            width: 40vw;
+        }
+    }
+    
 }
 
 .footer{
@@ -233,6 +242,7 @@ body{
 
     @include mq-up(md){
         width: 80%;
+        
     }
 }
 
@@ -346,6 +356,10 @@ body{
 
 .img-back-news{
     margin-top: 20vh;
+}
+
+.new-kategorie{
+    border: solid 1px;
 }
 
 /*------------------------------------------------------------------------**

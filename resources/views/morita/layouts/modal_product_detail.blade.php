@@ -23,7 +23,7 @@
                         @endif
                     </div>
                     <div class="col-10">
-                        <p>{{ $product->description }}</p>
+                        <p>{!! $product->description !!}</p>
                     </div>
                 </div>
             </div>

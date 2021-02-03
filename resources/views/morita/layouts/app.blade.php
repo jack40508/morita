@@ -39,7 +39,7 @@
         </div>
         <div class="mb-5" id="div-banner" style="background-image: url('/img/banner/banner_{{ $page->banner->id }}.jpg');">
             @if($page->name != 'home')
-                <h1 class="page_title"><img src="/img/title/title_{{ $page->id }}.png" alt="title_{{ $page->name }}" style="width: 40vw;"></h1>
+                <h1 class="page_title"><img src="/img/title/title_{{ $page->id }}.png" alt="title_{{ $page->name }}"></h1>
             @endif
         </div>
 

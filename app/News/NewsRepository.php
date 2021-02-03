@@ -32,13 +32,13 @@
         }
 
         public function getFrontNewestNewsOfOpen($num){
-            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->limit($num)->get();
+            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('id', 'DESC')->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->limit($num)->get();
 
             return $news;
         }
 
         public function getAllOpenNews(){
-            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->get();
+            $news = $this->news->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('id', 'DESC')->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->get();
 
             return $news;
         }
@@ -58,7 +58,7 @@
 
         public function getOpenNewsByUploadAt($date){
 
-            $news = $this->news->where('upload_at', '<=', $date." 23:59:59")->where('upload_at', '>=', $date." 00:00:00")->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->get();
+            $news = $this->news->where('upload_at', '<=', $date." 23:59:59")->where('upload_at', '>=', $date." 00:00:00")->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('id', 'DESC')->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC')->get();
 
             return $news;
         }
