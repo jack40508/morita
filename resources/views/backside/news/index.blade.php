@@ -20,7 +20,7 @@
                     <td>{{ $news->title }}</td>
                     <td>
                         @if(!$news->permission)
-                            <h4><span class="badge badge-pill badge-secondary mr-1">隠れる</span></h4>
+                            <h4><span class="badge badge-pill badge-secondary mr-1">非公開</span></h4>
                         @else
                             @if(strtotime(date('Y/m/d H:i:s')) < strtotime($news->upload_at))
                                 <h4><span class="badge badge-pill badge-warning mr-1" data-toggle="tooltip" data-placement="top" title="{{ $news->upload_at }}公開">公開待ち</span></h4>

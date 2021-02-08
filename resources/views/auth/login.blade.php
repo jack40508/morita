@@ -55,7 +55,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-3 offset-md-9">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('登入') }}
+                                    {{ __('ログイン') }}
                                 </button>
                                 <!--
                                 @if (Route::has('password.request'))

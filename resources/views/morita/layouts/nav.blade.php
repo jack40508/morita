@@ -13,7 +13,7 @@
                 Menu
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="/menu/all">全て商品</a>
+                    <a class="dropdown-item" href="/menu/all">全ての商品</a>
                     <a class="dropdown-item" href="/menu/limit">期間限定</a>
                     @foreach($productkategories as $productkategorie)
                         <a class="dropdown-item" href="/menu/{{ $productkategorie->id }}">{{ $productkategorie->name }}</a>
@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li class="nav-item collapse d-md-none pl-5" id="collapseMenu">
-                <a class="dropdown-item" href="/menu/all">全て商品</a>
+                <a class="dropdown-item" href="/menu/all">全ての商品</a>
                 <a class="dropdown-item" href="/menu/limit">期間限定</a>
                 @foreach($productkategories as $productkategorie)
                     <a class="dropdown-item" href="/menu/{{ $productkategorie->id }}">{{ $productkategorie->name }}</a>

@@ -9,13 +9,13 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>お知らせ「{{ $news->title }}」を隠れますか？</p>
+                <p>お知らせ「{{ $news->title }}」を非公開しますか？</p>
             </div>
             <div class="modal-footer">
                 {!! Form::open(['url'=>'backside/news/'.$news->id,'method'=>'DELETE']) !!}
                 {!! Form::hidden('is_sell', false) !!}
                 {!! Form::hidden('from', $from) !!}
-                {!! Form::submit('隠れる',['class'=>'btn btn-danger mt-1 mt-md-0 w-100']) !!}
+                {!! Form::submit('非公開',['class'=>'btn btn-danger mt-1 mt-md-0 w-100']) !!}
                 {!! Form::close() !!}
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
