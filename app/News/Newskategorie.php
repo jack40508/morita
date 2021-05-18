@@ -18,6 +18,6 @@ class Newskategorie extends Model
     }
 
     public function open_news(){
-      return $this->hasMany(News::class)->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC');
+      return $this->hasMany(News::class)->where('upload_at', '<=', date('Y/m/d H:i:s'))->where('permission', true)->orderBy('id', 'DESC')->orderBy('created_at', 'DESC')->orderBy('upload_at', 'DESC');
    }
 }

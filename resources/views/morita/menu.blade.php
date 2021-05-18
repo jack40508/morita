@@ -51,12 +51,12 @@
                 <div class="row">
                     @foreach($select_productkategorie->onsellproducts as $product)
                         <div class="col-md-3">
-                            <div class="card card-product">
+                            <div class="card card-product mb-5">
                                 <div class="col-8 col-md-10">
                                     <img class="card-img-product" src="/img/product/product_{{ $product->id }}.jpg" alt="Card image cap">
                                 </div>
                                 <div class="col-12 text-center">
-                                    <h4 class="card-product-name mt-3">{{ $product->name }}</h4>
+                                    <h5 class="card-product-name mt-3">{{ $product->name }}</h5>
                                 </div>
                                 <div class="col-12 text-right">
                                     <h5>￥{{ $product->productsizes[0]->price }}</h5>

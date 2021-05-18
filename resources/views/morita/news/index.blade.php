@@ -76,7 +76,7 @@
 
             <h3 class="news-kategorie-title">Category</h3>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item text-right"><h4><a href="/news">全部 ({{ $cnt_all_news }})</a></h4></li>
+                <li class="list-group-item text-right"><h4><a href="/news">全て ({{ $cnt_all_news }})</a></h4></li>
                 @foreach($newskategories as $newskategorie)
                 <li class="list-group-item text-right"><h4><a href="/news/category/{{ $newskategorie->id }}">{{ $newskategorie->name }} ({{count($newskategorie->open_news)}})</a></h4></li>
                 @endforeach

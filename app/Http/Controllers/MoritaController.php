@@ -154,6 +154,10 @@ class MoritaController extends Controller
     {
         $news = $this->news->getAllOpenNews();
 
+        foreach($news as $inews){
+            $inews->image = $inews->newsimages->first();
+        }
+
         return view('morita.news.layouts.news_list', compact('page_id', 'news'));
     }
 

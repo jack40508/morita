@@ -6,7 +6,11 @@
         <div class="col-md-8 col-12">
             <h2>{{ $news->title }}</h2>
             <hr>
-            <h4 class="text-right">{{ $news->newskategorie->name }}</h4>
+            <div class="row">
+                <div class="col-2 offset-md-10">
+                    <h4 class="text-center new-kategorie pt-1 pb-1">{{ $news->newskategorie->name }}</h4>
+                </div>
+            </div>
             <p>
                 {!! $news->content !!}
             </p>
@@ -35,7 +39,7 @@
 
             <h3 class="news-kategorie-title">Category</h3>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item text-right"><h4><a href="/news">全部 ({{ $cnt_all_news }})</a></h4></li>
+                <li class="list-group-item text-right"><h4><a href="/news">全て ({{ $cnt_all_news }})</a></h4></li>
                 @foreach($newskategories as $newskategorie)
                 <li class="list-group-item text-right"><h4><a href="/news/category/{{ $newskategorie->id }}">{{ $newskategorie->name }} ({{count($newskategorie->open_news)}})</a></h4></li>
                 @endforeach
