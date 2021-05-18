@@ -14,19 +14,19 @@ class BannerimageTableSeeder extends Seeder
     {
         //
         Bannerimage::create([
-
+            'id' => '1',
         ]);
         Bannerimage::create([
-
+            'id' => '2',
         ]);
         Bannerimage::create([
-
+            'id' => '3',
         ]);
         Bannerimage::create([
-
+            'id' => '4',
         ]);
         Bannerimage::create([
-
+            'id' => '5',
         ]);
     }
 }
