@@ -8,7 +8,7 @@ use App\Page\Page;
 class Bannerimage extends Model
 {
     //
-    protected $table = 'BannerImages';
+    protected $table = 'bannerimages';
     protected $fillable = [
     ];
 
