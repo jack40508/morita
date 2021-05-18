@@ -8,6 +8,9 @@ use App\News\News;
 class NewsNewstag extends Model
 {
     //
+    protected $primaryKey = ['news_id', 'newstag_id'];
+    public $incrementing = false;
+
     protected $table = 'news_newstag';
     protected $fillable = [
       'news_id',
