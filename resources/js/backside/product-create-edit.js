@@ -56,7 +56,7 @@ for(i=2; i<=sizeprice_id; i++){
     btnDeleteSizeprice.onclick = function(){
         var btn_id = parseInt(this.id.replace(/[^0-9]/ig,""));
         var deleteDivSizeprice = document.getElementById("div-sizeprice" + btn_id);
-        
+
         var divSizeprice = document.getElementById("div-sizeprice");
         divSizeprice.removeChild(deleteDivSizeprice);
     }
