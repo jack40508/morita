@@ -67,8 +67,8 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => $db_config['host'],
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => env('DATABASE_URL'),
+            'host' => $db_config['host'],
             'port' => env('DB_PORT', '5432'),
             'database' => $db_config['database'],
             'username' => $db_config['username'],
